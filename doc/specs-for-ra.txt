@@ -1,0 +1,23 @@
+The EU should create an attractive policy environment so that, by 2030, the EU’s share of the
+data economy – data stored, processed and put to valuable use in Europe - at least corresponds
+to its economic weight, not by fiat but by choice. The aim is to create a single European data
+space – a genuine single market for data, open to data from across the world – where personal
+as well as non-personal data, including sensitive business data, are secure and businesses also have easy access to an almost infinite amount of high-quality industrial data, boosting growth
+and creating value, while minimising the human carbon and environmental footprint. It should
+be a space where EU law can be enforced effectively, and where all data-driven products and
+services comply with the relevant norms of the EU’s single market. To this end, the EU
+should combine fit-for-purpose legislation and governance to ensure availability of data, with
+investments in standards, tools and infrastructures as well as competences for handling data.
+This favourable context, promoting incentives and choice, will lead to more data being stored
+and processed in the EU.
+
+
+
+OASIS SMP
+
+This document describes a protocol for publishing service metadata within a 4-corner network. In a 4-corner network, entities are exchanging business documents through intermediary gateway services (sometimes called Access Points). To successfully send a business document in a 4-corner network, an entity must be able to discover critical metadata about the recipient of the business document, such as types of documents the recipient is capable of receiving and methods of transport supported. The recipient makes this metadata available to other entities in the network through a Service Metadata Publisher service. This specification describes the request/response exchanges between a Service Metadata Publisher and a client wishing to discover endpoint information. A client can either be an end-user business application or a gateway/access point in the 4-corner network. It also defines the request processing that must happen at the client.
+
+Citizen Strong-boxes
+
+https://www.spri.eus/safebox/index_en.html
+
