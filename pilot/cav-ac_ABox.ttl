@@ -1,0 +1,928 @@
+@prefix : <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#> .
+@prefix cv: <http://data.europa.eu/m8g#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cav: <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cccev: <https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#> .
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix at-voc: <http://publications.europa.eu/resource/dataset/> .
+@base <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap> .
+
+<http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap> rdf:type owl:Ontology ;
+                                                                                owl:versionIRI cav:CAV.xml-2020-11-18 ;
+                                                                                <http://creativecommons.org/ns#attributionName> "European Commission" ;
+                                                                                dct:date "2020-11-18+01:00"^^xsd:date ;
+                                                                                dct:description """
+        This module provides the definitions for the Core Assessment Vocabulary - Anticorruzione Application Profile.
+        """@en ;
+                                                                                dct:license <http://creativecommons.org/licenses/by-sa/4.0/> ;
+                                                                                dct:title "Core Assessment Vocabulary - Anticorruzione Application Profile"@en ;
+                                                                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "cav-ac" ;
+                                                                                <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension#" ;
+                                                                                rdfs:label "Core Assessment Vocabulary - Anticorruzione Application Profile"@en ;
+                                                                                rdfs:seeAlso <https://github.com/isa-camss/CAV> ,
+                                                                                             <https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav> ;
+                                                                                owl:versionInfo "Core Assessment Vocabulary version 1.0.0" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://data.europa.eu/a4g/ontology#Lot1
+epo:Lot1 rdf:type owl:NamedIndividual ,
+                  epo:Lot ;
+         epo:isAwardedTo epo:TenderLotParticipantB ;
+         dct:created "2020-11-25T12:16:36.576+01:00"^^xsd:dateTime ;
+         dct:modified "2020-11-26T12:37:03.074+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/a4g/ontology#TenderLotParticipantA
+epo:TenderLotParticipantA rdf:type owl:NamedIndividual ,
+                                   epo:TenderLot ;
+                          epo:relatesTo epo:Lot1 ;
+                          dct:created "2020-11-25T08:39:01.206+01:00"^^xsd:dateTime ;
+                          dct:modified "2020-11-26T12:35:13.401+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/a4g/ontology#TenderLotParticipantB
+epo:TenderLotParticipantB rdf:type owl:NamedIndividual ,
+                                   epo:TenderLot ;
+                          epo:relatesTo epo:Lot1 ;
+                          dct:created "2020-11-25T08:39:23.801+01:00"^^xsd:dateTime ;
+                          dct:modified "2020-11-26T12:35:22.799+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/a4g/ontology#TenderLotParticipantC
+epo:TenderLotParticipantC rdf:type owl:NamedIndividual ,
+                                   epo:TenderLot ;
+                          epo:relatesTo epo:Lot1 ;
+                          dct:created "2020-11-25T08:39:34.462+01:00"^^xsd:dateTime ;
+                          dct:modified "2020-11-26T12:35:31.083+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/a4g/ontology#TenderLotParticipantD
+epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
+                                   epo:TenderLot ;
+                          dct:created "2020-11-25T08:39:44.858+01:00"^^xsd:dateTime ;
+                          dct:modified "2020-11-26T12:53:41.198+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#EvaluationContext1
+:EvaluationContext1 rdf:type owl:NamedIndividual ,
+                             cav:EvaluationContext ;
+                    dct:created "2020-12-01T16:47:37.512+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue1
+:InputValue1 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantB ;
+             :hasBetterCandidate epo:TenderLotParticipantB ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect1 ;
+             cccev:hasNumericValue "2"^^xsd:int ;
+             dct:created "2020-12-02T09:49:53.289+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T09:56:04.471+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue10
+:InputValue10 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantB ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:18:52.971+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:20:19.947+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue11
+:InputValue11 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantA ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:19:00.202+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:22:06.790+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue12
+:InputValue12 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:19:07.603+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:23:23.802+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue13
+:InputValue13 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantB ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "5"^^xsd:int ;
+              dct:created "2020-12-02T10:23:36.172+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:25:03.480+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue14
+:InputValue14 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantA ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:23:46.321+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:26:09.554+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue15
+:InputValue15 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:23:53.969+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:27:25.923+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue16
+:InputValue16 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantB ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "4"^^xsd:int ;
+              dct:created "2020-12-02T10:27:50.087+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:29:17.249+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue17
+:InputValue17 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantA ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:27:58.177+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:30:30.966+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue18
+:InputValue18 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:28:04.879+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:32:58.031+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue19
+:InputValue19 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantB ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:33:25.414+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:34:50.159+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue2
+:InputValue2 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantC ;
+             :hasBetterCandidate epo:TenderLotParticipantC ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect1 ;
+             cccev:hasNumericValue "1"^^xsd:int ;
+             dct:created "2020-12-02T09:50:08.024+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:07:32.617+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue20
+:InputValue20 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantA ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:33:33.257+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:37:11.122+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue21
+:InputValue21 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantA ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:33:41.638+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:38:51.268+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue22
+:InputValue22 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantB ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "4"^^xsd:int ;
+              dct:created "2020-12-02T10:39:08.682+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:40:24.257+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue23
+:InputValue23 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantA ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:39:16.685+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:41:33.059+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue24
+:InputValue24 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:39:25.096+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:42:45.866+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue25
+:InputValue25 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantB ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:42:58.838+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:44:31.205+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue26
+:InputValue26 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantA ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:43:06.317+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:45:54.237+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue27
+:InputValue27 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantA ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:43:14.332+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:47:13.760+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue28
+:InputValue28 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:54:46.124+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:56:11.612+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue29
+:InputValue29 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T10:56:24.046+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:57:50.863+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue3
+:InputValue3 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantD ;
+             :hasBetterCandidate epo:TenderLotParticipantA ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect1 ;
+             cccev:hasNumericValue "1"^^xsd:int ;
+             dct:created "2020-12-02T09:50:13.772+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:07:44.299+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue30
+:InputValue30 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T10:58:07.524+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T10:59:29.010+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue31
+:InputValue31 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "4"^^xsd:int ;
+              dct:created "2020-12-02T10:59:39.708+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:00:49.315+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue32
+:InputValue32 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:01:17.514+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:02:23.199+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue33
+:InputValue33 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:02:35.578+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:04:36.463+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue34
+:InputValue34 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:04:56.786+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:06:27.595+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue35
+:InputValue35 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:06:37.616+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:08:02.352+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue36
+:InputValue36 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:08:22.546+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:10:05.268+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue37
+:InputValue37 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:10:25.514+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:14:21.074+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue38
+:InputValue38 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:14:30.886+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:15:57.287+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue39
+:InputValue39 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator2 ,
+                            :evaluator3 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:16:08.961+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:19:46.650+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue4
+:InputValue4 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantB ;
+             :hasBetterCandidate epo:TenderLotParticipantB ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect2 ;
+             cccev:hasNumericValue "2"^^xsd:int ;
+             dct:created "2020-12-02T09:50:22.796+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:10:03.870+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue40
+:InputValue40 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:18:52.970+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:21:21.050+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue41
+:InputValue41 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:21:37.723+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:23:12.374+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue42
+:InputValue42 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "4"^^xsd:int ;
+              dct:created "2020-12-02T11:23:34.639+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:25:46.023+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue43
+:InputValue43 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:24:52.698+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:27:39.367+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue44
+:InputValue44 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantC ;
+              :hasBetterCandidate epo:TenderLotParticipantC ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:27:51.951+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:29:06.758+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue45
+:InputValue45 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantB ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantB ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:29:16.210+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:30:30.209+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue46
+:InputValue46 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantC ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:31:14.771+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:32:33.201+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue47
+:InputValue47 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantC ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:32:47.152+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:34:09.709+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue48
+:InputValue48 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator1 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:34:40.179+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:36:10.883+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue49
+:InputValue49 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:36:26.203+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:38:38.168+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue5
+:InputValue5 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantC ;
+             :hasBetterCandidate epo:TenderLotParticipantC ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect2 ;
+             cccev:hasNumericValue "3"^^xsd:int ;
+             dct:created "2020-12-02T09:50:01.425+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:12:35.814+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue50
+:InputValue50 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantC ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:37:52.419+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:40:03.600+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue51
+:InputValue51 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantC ;
+              :isProvidedBy :evaluator2 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:40:14.910+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:41:22.126+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue52
+:InputValue52 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantC ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect1 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:41:44.957+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:45:01.948+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue53
+:InputValue53 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantD ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect2 ;
+              cccev:hasNumericValue "2"^^xsd:int ;
+              dct:created "2020-12-02T11:45:19.482+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:46:37.747+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue54
+:InputValue54 rdf:type owl:NamedIndividual ,
+                       :InputValue ;
+              cv:role :evaluator ;
+              :comparesSourceThing epo:TenderLotParticipantC ;
+              :comparesWithTargetThing epo:TenderLotParticipantD ;
+              :hasBetterCandidate epo:TenderLotParticipantC ;
+              :isProvidedBy :evaluator3 ;
+              :refersToCriterion :QualityAspect3 ;
+              cccev:hasNumericValue "3"^^xsd:int ;
+              dct:created "2020-12-02T11:46:50.990+01:00"^^xsd:dateTime ;
+              dct:modified "2020-12-02T11:48:05.547+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue6
+:InputValue6 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantD ;
+             :hasBetterCandidate epo:TenderLotParticipantD ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect2 ;
+             cccev:hasNumericValue "2"^^xsd:int ;
+             dct:created "2020-12-02T09:50:37.191+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:13:57.747+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue7
+:InputValue7 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantB ;
+             :hasBetterCandidate epo:TenderLotParticipantB ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect3 ;
+             cccev:hasNumericValue "4"^^xsd:int ;
+             dct:created "2020-12-02T09:50:45.733+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:15:19.907+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue8
+:InputValue8 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantC ;
+             :hasBetterCandidate epo:TenderLotParticipantA ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect3 ;
+             cccev:hasNumericValue "2"^^xsd:int ;
+             dct:created "2020-12-02T09:50:54.085+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:16:38.204+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue9
+:InputValue9 rdf:type owl:NamedIndividual ,
+                      :InputValue ;
+             cv:role :evaluator ;
+             :comparesSourceThing epo:TenderLotParticipantA ;
+             :comparesWithTargetThing epo:TenderLotParticipantD ;
+             :hasBetterCandidate epo:TenderLotParticipantA ;
+             :isProvidedBy :evaluator1 ;
+             :refersToCriterion :QualityAspect3 ;
+             cccev:hasNumericValue "2"^^xsd:int ;
+             dct:created "2020-12-02T10:14:12.841+01:00"^^xsd:dateTime ;
+             dct:modified "2020-12-02T10:17:56.592+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#QualityAspect1
+:QualityAspect1 rdf:type owl:NamedIndividual ,
+                         epo:AwardCriterion ;
+                epo:hasParent :QualityDimension ;
+                epo:isUsedToAward epo:Lot1 ;
+                cccev:hasMaximumScore "6"^^xsd:int ;
+                dct:created "2020-11-25T08:49:05.803+01:00"^^xsd:dateTime ;
+                dct:modified "2020-12-02T09:19:00.795+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#QualityAspect2
+:QualityAspect2 rdf:type owl:NamedIndividual ,
+                         epo:AwardCriterion ;
+                epo:hasParent :QualityDimension ;
+                epo:isUsedToAward epo:Lot1 ;
+                cccev:hasMaximumScore "3"^^xsd:int ;
+                dct:created "2020-11-25T08:49:10.621+01:00"^^xsd:dateTime ;
+                dct:modified "2020-12-02T09:20:43.593+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#QualityAspect3
+:QualityAspect3 rdf:type owl:NamedIndividual ,
+                         epo:AwardCriterion ;
+                epo:hasParent :QualityDimension ;
+                epo:isUsedToAward epo:Lot1 ;
+                cccev:hasMaximumScore "3"^^xsd:int ;
+                dct:created "2020-11-25T08:49:14.917+01:00"^^xsd:dateTime ;
+                dct:modified "2020-12-02T09:20:55.513+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#QualityDimension
+:QualityDimension rdf:type owl:NamedIndividual ,
+                           epo:AwardCriterion ;
+                  epo:hasChild :QualityAspect1 ,
+                               :QualityAspect2 ,
+                               :QualityAspect3 ;
+                  epo:hasType <http://publications.europa.eu/resource/dataset/award-criterion-type#Quality> ;
+                  cccev:hasMaximumScore "60"^^xsd:int ;
+                  dct:created "2020-12-02T08:45:04.185+01:00"^^xsd:dateTime ;
+                  dct:modified "2020-12-02T09:17:01.447+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#evaluator
+:evaluator rdf:type owl:NamedIndividual ,
+                    :role-type ;
+           dct:created "2020-12-02T09:45:32.195+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#evaluator1
+:evaluator1 rdf:type owl:NamedIndividual ,
+                     foaf:Agent ;
+            dct:created "2020-11-25T08:29:30.577+01:00"^^xsd:dateTime ;
+            dct:modified "2020-11-26T15:27:25.529+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#evaluator2
+:evaluator2 rdf:type owl:NamedIndividual ,
+                     foaf:Agent ;
+            dct:created "2020-11-25T08:35:10.716+01:00"^^xsd:dateTime ;
+            dct:modified "2020-11-26T15:30:15.282+01:00"^^xsd:dateTime .
+
+
+###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#evaluator3
+:evaluator3 rdf:type owl:NamedIndividual ,
+                     foaf:Agent ;
+            dct:created "2020-11-25T08:35:18.416+01:00"^^xsd:dateTime ;
+            dct:modified "2020-11-26T15:32:30.653+01:00"^^xsd:dateTime .
+
+
+###  http://publications.europa.eu/resource/dataset/award-criterion-type#Cost
+<http://publications.europa.eu/resource/dataset/award-criterion-type#Cost> rdf:type owl:NamedIndividual ,
+                                                                                    at-voc:award-criterion-type ;
+                                                                           dct:created "2020-11-25T12:05:43.609+01:00"^^xsd:dateTime .
+
+
+###  http://publications.europa.eu/resource/dataset/award-criterion-type#Price
+<http://publications.europa.eu/resource/dataset/award-criterion-type#Price> rdf:type owl:NamedIndividual ,
+                                                                                     at-voc:award-criterion-type ;
+                                                                            dct:created "2020-11-25T12:06:34.294+01:00"^^xsd:dateTime .
+
+
+###  http://publications.europa.eu/resource/dataset/award-criterion-type#Quality
+<http://publications.europa.eu/resource/dataset/award-criterion-type#Quality> rdf:type owl:NamedIndividual ,
+                                                                                       at-voc:award-criterion-type ;
+                                                                              dct:created "2020-11-25T12:07:08.774+01:00"^^xsd:dateTime .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

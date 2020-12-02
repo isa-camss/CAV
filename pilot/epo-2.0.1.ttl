@@ -1,0 +1,154 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix dc: <http://www.omg.org/spec/UML/20131001/UMLDC> .
+@prefix cccev: <https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@base <http://data.europa.eu/a4g/ontology> .
+
+<http://data.europa.eu/a4g/ontology> rdf:type owl:Ontology ;
+                                                                  owl:versionIRI epo:ePO.xml-2020-11-18 ; 
+                                                                  cc:attributionName "Publications Office" ;
+                                                                  dct:date "2020-11-18+01:00"^^xsd:date ;
+                                                                  dct:description """This module provides the definitions for the eProcurement Ontology"""@en ;
+                                                                  dct:license <http://creativecommons.org/licenses/by-sa/4.0/> ;
+                                                                  dct:title "The eProcurement Ontology"@en ;
+                                                                  vann:preferredNamespacePrefix "epo" ;
+                                                                  skos:scopeNote "The epo preferred name space prefix stands for the eProcurement Ontology"@en ;
+                                                                  vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+                                                                  rdfs:label "The eProcurement Ontology"@en ;
+                                                                  owl:versionInfo """The eProcurement Ontology 2.0.1""" .
+
+#################################################################
+#    Data Properties
+#################################################################
+###  http://data.europa.eu/a4g/ontology#hasName
+epo:hasName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain epo:Criterion ;
+                   rdfs:range xsd:string ;
+                   rdfs:isDefinedBy epo: ;
+                   rdfs:label "Name"@en ;
+                   skos:prefLabel "Name"@en .
+                   
+###  http://data.europa.eu/a4g/ontology#hasDescription
+epo:hasDescription rdf:type owl:DatatypeProperty ;
+                   rdfs:domain epo:Criterion ;
+                   rdfs:range xsd:string ;
+                   rdfs:isDefinedBy epo: ;
+                   rdfs:label "Maximum Score"@en ;
+                   skos:prefLabel "Maximum Score"@en .
+
+###  http://data.europa.eu/a4g/ontology#hasType
+epo:hasType rdf:type owl:DatatypeProperty ;
+                   rdfs:domain epo:Criterion ;
+                   rdfs:range skos:Concept ;
+                   rdfs:isDefinedBy epo: ;
+                   rdfs:label "Type"@en ;
+                   skos:prefLabel "Type"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+### http://data.europa.eu/a4g/ontology#hasType
+epo:hasType rdf:type owl:ObjectProperty ;
+                        rdfs:domain epo:AwardCriterion ;
+                        rdfs:range at-voc:awar-criterion-type ; 
+                        rdfs:isDefinedBy epo: ; 
+                        rdfs:label "Has type"@en ;
+                        skos:prefLabel "Has type"@en . 
+                        
+### http://data.europa.eu/a4g/ontology#hasChild
+epo:hasChild rdf:type owl:ObjectProperty ;
+                        rdfs:domain epo:Criterion ;
+                        rdfs:range epo:Criterion ; 
+                        rdfs:isDefinedBy epo: ; 
+                        owl:inverseOf epo:hasParent ;
+                        rdfs:label "Has child"@en ;
+                        skos:prefLabel "Has child"@en . 
+
+### http://data.europa.eu/a4g/ontology#hasParent
+epo:hasParent rdf:type owl:ObjectProperty ;
+                        rdfs:domain epo:Criterion ;
+                        rdfs:range epo:Criterion ; 
+                        rdfs:isDefinedBy epo: ; 
+                        owl:inverseOf epo:hasChild ;
+                        rdfs:label "Has parent"@en ;
+                        skos:prefLabel "Has parent"@en . 
+
+### http://data.europa.eu/a4g/ontology#isUsedToAward
+epo:isUsedToAward rdf:type owl:ObjectProperty ;
+                        rdfs:domain epo:AwardCriterion ;
+                        rdfs:range epo:Lot ; 
+                        rdfs:isDefinedBy epo: ; 
+                        rdfs:label "Is used to award"@en ;
+                        skos:prefLabel "Is used to award"@en .       
+
+### http://data.europa.eu/a4g/ontology#isAwardedTo
+epo:isAwardedTo rdf:type owl:ObjectProperty ;
+                        rdfs:domain epo:Lot ;
+                        rdfs:range epo:TenderLot ; 
+                        rdfs:isDefinedBy epo: ; 
+                        rdfs:label "Is awarded to"@en ;
+                        skos:prefLabel "Is awarded to"@en .             
+
+### http://data.europa.eu/a4g/ontology#relatesTo
+epo:relatesTo rdf:type owl:ObjectProperty ;
+                        rdfs:domain epo:TenderLot ;
+                        rdfs:range epo:Lot ; 
+                        rdfs:isDefinedBy epo: ; 
+                        rdfs:label "Relates to"@en ;
+                        owl:inverseOf epo:isRelatedTo ;
+                        skos:prefLabel "Relates to"@en .           
+
+### http://data.europa.eu/a4g/ontology#isRelatedTo
+epo:isRelatedTo rdf:type owl:ObjectProperty ;
+                        rdfs:domain epo:Lot ;
+                        rdfs:range epo:TenderLot ; 
+                        rdfs:isDefinedBy epo: ; 
+                        rdfs:label "Is related to"@en ;
+                        owl:inverseOf epo:relatesTo ;
+                        skos:prefLabel "Is related to"@en .                                 
+                
+
+#################################################################
+#    Classes
+#################################################################                   
+###  http://data.europa.eu/a4g/ontology#Criterion
+epo:Criterion rdf:type owl:Class ;
+               rdfs:subClassOf cccev:Criterion ;
+               rdfs:comment "A condition that needs to be answered for evaluation purposes."@en ;
+               rdfs:label "Criterion"@en ;
+               skos:prefLabel "Criterion"@en .
+
+###  http://data.europa.eu/a4g/ontology#ProcurementCriterion
+epo:ProcurementCriterion rdf:type owl:Class ;
+               rdfs:comment "This Procurement Criterion can be only Exclusion Ground, Selection Criterion or Award Criterion. Each of these criteria can contain subcriteria (Criterion class)."@en ;
+               rdfs:subClassOf epo:Criterion ;
+               rdfs:label "Procurement Criterion"@en ;
+               skos:prefLabel "Procurement Criterion"@en .
+
+###  http://data.europa.eu/a4g/ontology#AwardCriterion
+epo:AwardCriterion rdf:type owl:Class ;
+               rdfs:comment "Describes a requirement that the tender needs to resolve and on which the tender is evaluated and ranked."@en ;
+               rdfs:subClassOf epo:ProcurementCriterion ;
+               rdfs:label "Award Criterion"@en ;
+               skos:prefLabel "Award Criterion"@en .
+
+###  http://data.europa.eu/a4g/ontology#Lot
+epo:Lot rdf:type owl:Class ;
+               rdfs:comment "A qualitative, quantitative or strategic subdivision of the goods, services or works to be procured, allowing the award of one or more contracts."@en ;
+               rdfs:label "Lot"@en ;
+               skos:prefLabel "Lot"@en .
+
+###  http://data.europa.eu/a4g/ontology#TenderLot
+epo:TenderLot rdf:type owl:Class ;
+               rdfs:comment "Part of the tender that applies to the related lot."@en ;
+               rdfs:label "TenderLot"@en ;
+               skos:prefLabel "TenderLot"@en .
