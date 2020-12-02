@@ -13,7 +13,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cccev: <https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#> .
 @prefix grddl: <http://www.w3.org/2003/g/data-view#> .
-@prefix at-voc: <http://publications.europa.eu/resource/dataset/> .
+@prefix act: <http://publications.europa.eu/resource/dataset/award-criterion-type#> .
+@prefix roles: <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/resource/role-type#> .
 @base <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap> .
 
 <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap> rdf:type owl:Ontology ;
@@ -85,7 +86,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue1
 :InputValue1 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantB ;
              :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -99,7 +100,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue10
 :InputValue10 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantB ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -113,7 +114,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue11
 :InputValue11 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -127,7 +128,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue12
 :InputValue12 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -141,7 +142,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue13
 :InputValue13 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantB ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -155,7 +156,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue14
 :InputValue14 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -169,7 +170,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue15
 :InputValue15 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -183,7 +184,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue16
 :InputValue16 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantB ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -197,7 +198,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue17
 :InputValue17 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -211,7 +212,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue18
 :InputValue18 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -225,7 +226,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue19
 :InputValue19 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantB ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -239,7 +240,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue2
 :InputValue2 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantC ;
              :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -253,7 +254,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue20
 :InputValue20 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -267,7 +268,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue21
 :InputValue21 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -281,7 +282,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue22
 :InputValue22 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantB ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -295,7 +296,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue23
 :InputValue23 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -309,7 +310,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue24
 :InputValue24 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -323,7 +324,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue25
 :InputValue25 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantB ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -337,7 +338,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue26
 :InputValue26 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -351,7 +352,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue27
 :InputValue27 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantA ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -365,7 +366,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue28
 :InputValue28 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -379,7 +380,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue29
 :InputValue29 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -393,7 +394,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue3
 :InputValue3 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantD ;
              :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -407,7 +408,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue30
 :InputValue30 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -421,7 +422,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue31
 :InputValue31 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -435,7 +436,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue32
 :InputValue32 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -449,7 +450,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue33
 :InputValue33 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -463,7 +464,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue34
 :InputValue34 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -477,7 +478,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue35
 :InputValue35 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -491,7 +492,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue36
 :InputValue36 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -505,7 +506,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue37
 :InputValue37 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -519,7 +520,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue38
 :InputValue38 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -547,7 +548,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue4
 :InputValue4 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantB ;
              :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -561,7 +562,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue40
 :InputValue40 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -575,7 +576,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue41
 :InputValue41 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -589,7 +590,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue42
 :InputValue42 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -603,7 +604,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue43
 :InputValue43 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -617,7 +618,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue44
 :InputValue44 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantC ;
               :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -631,7 +632,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue45
 :InputValue45 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantB ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -645,7 +646,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue46
 :InputValue46 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -659,7 +660,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue47
 :InputValue47 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -673,7 +674,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue48
 :InputValue48 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -687,7 +688,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue49
 :InputValue49 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -701,7 +702,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue5
 :InputValue5 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantC ;
              :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -715,7 +716,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue50
 :InputValue50 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -729,7 +730,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue51
 :InputValue51 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -743,7 +744,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue52
 :InputValue52 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -757,7 +758,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue53
 :InputValue53 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -771,7 +772,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue54
 :InputValue54 rdf:type owl:NamedIndividual ,
                        :InputValue ;
-              cv:role :evaluator ;
+              cv:role role:evaluator ;
               :comparesSourceThing epo:TenderLotParticipantC ;
               :comparesWithTargetThing epo:TenderLotParticipantD ;
               :hasBetterCandidate epo:TenderLotParticipantC ;
@@ -785,7 +786,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue6
 :InputValue6 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantD ;
              :hasBetterCandidate epo:TenderLotParticipantD ;
@@ -799,7 +800,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue7
 :InputValue7 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantB ;
              :hasBetterCandidate epo:TenderLotParticipantB ;
@@ -813,7 +814,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue8
 :InputValue8 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantC ;
              :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -827,7 +828,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue9
 :InputValue9 rdf:type owl:NamedIndividual ,
                       :InputValue ;
-             cv:role :evaluator ;
+             cv:role role:evaluator ;
              :comparesSourceThing epo:TenderLotParticipantA ;
              :comparesWithTargetThing epo:TenderLotParticipantD ;
              :hasBetterCandidate epo:TenderLotParticipantA ;
@@ -881,7 +882,7 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 
 
 ###  http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#evaluator
-:evaluator rdf:type owl:NamedIndividual ,
+role:evaluator rdf:type owl:NamedIndividual ,
                     :role-type ;
            dct:created "2020-12-02T09:45:32.195+01:00"^^xsd:dateTime .
 
@@ -909,19 +910,19 @@ epo:TenderLotParticipantD rdf:type owl:NamedIndividual ,
 
 ###  http://publications.europa.eu/resource/dataset/award-criterion-type#Cost
 <http://publications.europa.eu/resource/dataset/award-criterion-type#Cost> rdf:type owl:NamedIndividual ,
-                                                                                    at-voc:award-criterion-type ;
+                                                                                    act:award-criterion-type ;
                                                                            dct:created "2020-11-25T12:05:43.609+01:00"^^xsd:dateTime .
 
 
 ###  http://publications.europa.eu/resource/dataset/award-criterion-type#Price
 <http://publications.europa.eu/resource/dataset/award-criterion-type#Price> rdf:type owl:NamedIndividual ,
-                                                                                     at-voc:award-criterion-type ;
+                                                                                     act:award-criterion-type ;
                                                                             dct:created "2020-11-25T12:06:34.294+01:00"^^xsd:dateTime .
 
 
 ###  http://publications.europa.eu/resource/dataset/award-criterion-type#Quality
 <http://publications.europa.eu/resource/dataset/award-criterion-type#Quality> rdf:type owl:NamedIndividual ,
-                                                                                       at-voc:award-criterion-type ;
+                                                                                       act:award-criterion-type ;
                                                                               dct:created "2020-11-25T12:07:08.774+01:00"^^xsd:dateTime .
 
 

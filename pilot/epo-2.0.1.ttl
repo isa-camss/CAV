@@ -10,7 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix act: <http://publications.europa.eu/resource/dataset/award-criterion-type#> .
 @base <http://data.europa.eu/a4g/ontology> .
 
 <http://data.europa.eu/a4g/ontology> rdf:type owl:Ontology ;
@@ -45,13 +45,6 @@ epo:hasDescription rdf:type owl:DatatypeProperty ;
                    rdfs:label "Maximum Score"@en ;
                    skos:prefLabel "Maximum Score"@en .
 
-###  http://data.europa.eu/a4g/ontology#hasType
-epo:hasType rdf:type owl:DatatypeProperty ;
-                   rdfs:domain epo:Criterion ;
-                   rdfs:range skos:Concept ;
-                   rdfs:isDefinedBy epo: ;
-                   rdfs:label "Type"@en ;
-                   skos:prefLabel "Type"@en .
 
 #################################################################
 #    Object Properties
@@ -59,7 +52,7 @@ epo:hasType rdf:type owl:DatatypeProperty ;
 ### http://data.europa.eu/a4g/ontology#hasType
 epo:hasType rdf:type owl:ObjectProperty ;
                         rdfs:domain epo:AwardCriterion ;
-                        rdfs:range at-voc:awar-criterion-type ; 
+                        rdfs:range act: ; 
                         rdfs:isDefinedBy epo: ; 
                         rdfs:label "Has type"@en ;
                         skos:prefLabel "Has type"@en . 
