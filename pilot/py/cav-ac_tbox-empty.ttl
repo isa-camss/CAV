@@ -1,0 +1,101 @@
+@prefix cap: <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cccev: <https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#> .
+@prefix dc: <http://www.omg.org/spec/UML/20131001/UMLDC> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix cav: <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap> .
+
+<http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap> rdf:type owl:Ontology ;
+                                                                  owl:versionIRI cav:CAV.xml-2020-11-18 ; 
+                                                                  cc:attributionName "European Commission" ;
+                                                                  dct:date "2020-11-18+01:00"^^xsd:date ;
+                                                                  dct:description """This module provides the definitions for the Core Assessment Vocabulary - Anticorruzione Application Profile."""@en ;
+                                                                  dct:license <http://creativecommons.org/licenses/by-sa/4.0/> ;
+                                                                  dct:title "Core Assessment Vocabulary - Anticorruzione Application Profile"@en ;
+                                                                  vann:preferredNamespacePrefix "cap" ;
+                                                                  skos:scopeNote "The cap preferred name space prefix stands for core assessment profile and is used exclusively in the context of the pilot CAV Anticorruzione Application Profile"@en ;
+                                                                  vann:preferredNamespaceUri "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#" ;
+                                                                  rdfs:label "Core Assessment Vocabulary - Anticorruzione Application Profile"@en ;
+                                                                  rdfs:seeAlso <https://github.com/isa-camss/CAV> ,
+																  <https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav> ;
+                                                                  owl:versionInfo """Core Assessment Vocabulary - Anticorruzione Application Profile 1.0.0""" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+### http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#isProvidedBy
+cap:isProvidedBy rdf:type owl:ObjectProperty ;
+                        rdfs:domain cap:InputValue ;
+                        rdfs:range foaf:Agent ; 
+                        rdfs:isDefinedBy cap: ; 
+                        rdfs:label "Is provided by"@en ;
+                        skos:prefLabel "Is provided by"@en . 
+    
+### http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#comparesWithTargetThing
+cap:comparesWithTargetThing rdf:type owl:ObjectProperty ; 
+                        rdfs:domain cap:InputValue ;
+                        rdfs:range epo:TenderLot ; 
+                        rdfs:isDefinedBy cap: ;
+                        rdfs:label "Compares with target thing"@en ;
+                        skos:prefLabel "Compares with target thing"@en .
+
+
+### http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#comparesSourceThing
+cap:comparesSourceThing rdf:type owl:ObjectProperty ; 
+                        rdfs:domain cap:InputValue ;
+                        rdfs:range epo:TenderLot ; 
+                        rdfs:isDefinedBy cap: ;
+                        rdfs:label "Compares source thing"@en ;
+                        skos:prefLabel "Compares source thing"@en .
+
+
+### http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#hasBetterCandidate
+cap:hasBetterCandidate rdf:type owl:ObjectProperty ; 
+                        rdfs:domain cap:InputValue ;
+                        rdfs:range epo:TenderLot ; 
+                        rdfs:isDefinedBy cap: ;
+                        rdfs:label "Has better candidate"@en ;
+                        skos:prefLabel "Has better candidate"@en .
+
+### http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#refersToCriterion
+cap:refersToCriterion rdf:type owl:ObjectProperty ; 
+                        rdfs:domain cap:InputValue ;
+                        rdfs:range epo:AwardCriterion ; 
+                        rdfs:isDefinedBy cap: ;
+                        rdfs:label "Refers to criterion"@en ;
+                        skos:prefLabel "Refers to criterion"@en .
+
+
+################################################################
+#    Classes
+#################################################################
+
+###  http://data.europa.eu/a4g/ontology#Criterion
+epo:Criterion rdf:type owl:Class ;
+               rdfs:subClassOf cccev:Criterion ;
+               rdfs:label "Criterion"@en ;
+               skos:prefLabel "Criterion"@en .
+
+### http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue
+cap:InputValue rdf:type owl:Class ;
+               rdfs:label "Input Value"@en ;
+               rdfs:subClassOf cccev:Value ,
+               cv:Participation ,
+               rdfs:Resource ;
+               skos:prefLabel "Input Value"@en . 
+               
+               
+               
+                                       
