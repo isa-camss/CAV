@@ -14,6 +14,7 @@ epo = Namespace("http://data.europa.eu/a4g/ontology#")
 cccev = Namespace("https://data.europe.eu/semanticassets/ns/cv/cccev_v2.0.0#")
 roles = Namespace("http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/resource/role-type#")
 cv = Namespace("http://data.europa.eu/m8g#")
+ct = Namespace("http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/resource/criterion-type#")
 
 EXCEL_FILE = 'evaluation-tool.xlsm'
 DATA_TAB = 'REPORTS PER EVALUATOR'
@@ -32,6 +33,7 @@ def graph() -> Graph:
     g.bind('foaf', foaf)
     g.bind('roles', roles)
     g.bind('cv', cv)
+    g.bind('ct', ct)
     return g
 
 
@@ -250,16 +252,11 @@ def instantiate_criteria(g, x, t) -> (Graph, []):
     return g, criteria
 
 
-def run():
+def run() -> Graph:
     g = graph()  # Creates the graph of the ABox
     g, criteria = instantiate_criteria(g, EXCEL_FILE, CRITERIA_TAB)
-    # show_save(g, False)                       # Test the graph
     e = extract(EXCEL_FILE, DATA_TAB)           # Creates a pandas data frame from the Excel dataset
     g, r = build_roles(g)                       # Instantiates the role 'evaluator'
     g, tl = lots_tendered(g)                    # Instantiates TenderLots 'A' to 'L'
     g = transform(e, g, tl, r, criteria)        # Populates the graph
-    show_save(g, True)                          # Saves the graph in a file
-
-
-if __name__ == "__main__":
-    run()
+    return g
