@@ -40,7 +40,7 @@ def insert(g, sparql):
 def run(g: Graph):
     sparql = connect()
     drop(sparql)
-    insert(g, sparql)
+    # insert(g, sparql)
 
 
 if __name__ == "__main__":
