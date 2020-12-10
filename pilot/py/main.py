@@ -1,12 +1,15 @@
 import etl
-import store as st
+import store
+import score
 
 
 def run():
     g = etl.run()
     etl.show_save(g, True)
-    # m = st.run(g)  # Not working, don't ask me why
-    
+    m = store.run(g)  # Not working, don't ask me why
+    j, p, r = score.run()
+
+    print(r)
 
     return
 

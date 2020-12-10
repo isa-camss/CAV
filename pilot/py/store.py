@@ -10,7 +10,6 @@ def connect():
     sparql.setHTTPAuth(DIGEST)
     sparql.setCredentials("admin", "admin")
     sparql.setMethod(POST)
-    sparql.addNamedGraph("http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#")
     return sparql
 
 
@@ -21,7 +20,11 @@ def drop(sparql):
     return
 
 
-def insert(g, sparql):
+def insert(g, sparql, skip: bool = True):
+    if skip:
+        print("INSERT done")
+        return
+
     triples = ""
     for subject, predicate, obj in g:
         triples = triples + subject.n3() + " " + predicate.n3() + " " + obj.n3() + " . \n"
@@ -40,7 +43,7 @@ def insert(g, sparql):
 def run(g: Graph):
     sparql = connect()
     drop(sparql)
-    # insert(g, sparql)
+    insert(g, sparql, True)
 
 
 if __name__ == "__main__":
