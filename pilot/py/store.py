@@ -6,7 +6,7 @@ cap = Namespace("http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/
 
 
 def connect():
-    sparql = SPARQLWrapper("http://192.168.1.46:7200/repositories/cav-pilot")
+    sparql = SPARQLWrapper("http://localhost:7200/repositories/cav-pilot")
     sparql.setHTTPAuth(DIGEST)
     sparql.setCredentials("anonymous", "public")
     sparql.setMethod(POST)

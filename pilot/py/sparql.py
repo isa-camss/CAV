@@ -6,7 +6,7 @@ import numpy as np
 # %matplotlib inline
 
 def _connect():
-    sparql = SPARQLWrapper("http://192.168.1.46:7200/repositories/cav-pilot")
+    sparql = SPARQLWrapper("http://localhost:7200/repositories/cav-pilot")
     sparql.setHTTPAuth(DIGEST)
     sparql.setCredentials("anonymous", "public")
     sparql.setMethod(POST)
