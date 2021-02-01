@@ -10,5 +10,10 @@ For the development of this CAV-AP, the latest version of the [ePO](https://gith
 maintained by the Publications Office of the European Union, and the latest available version is 2.0.2 (soon to be released on the 
 [EU Vocabularies](https://op.europa.eu/en/web/eu-vocabularies) site).
 
-Apart from the code, in Python, you will find in this folder a Jupyter Notebook illustrating the functioning of the pilot.
+All the materials used and developed in the context of this pilot are organised in this folder as follows:
+
+- **doc**: documentation explaining how Anticorruzione use existing multicriteria methods for the decision-making process;
+- **py**: python3 scripts for the extraction of data from the sample dataset provided, its transformation and loading as RDF. It contains also a Jupyter Notebook illustrating the logic of the pilot;
+- **uml**: the data model illustrating how this CAV-AP builds extensions and custiomisation on top of the CAV, and how it is connected to ePO and other vocabularies. The model is browseable as HTML;
+- **xmi**: the exportation of the UML model using the automated tools developed in the context of ePO.
 
