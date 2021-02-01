@@ -82,12 +82,6 @@ cap:refersToCriterion rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
-###  http://data.europa.eu/a4g/ontology#Criterion
-epo:Criterion rdf:type owl:Class ;
-               rdfs:subClassOf cccev:Criterion ;
-               rdfs:label "Criterion"@en ;
-               skos:prefLabel "Criterion"@en .
-
 ### http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c/extension/cap#InputValue
 cap:InputValue rdf:type owl:Class ;
                rdfs:label "Input Value"@en ;
