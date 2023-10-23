@@ -1,0 +1,25 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.knowledgefactory.com/dataset/bregdcat/dataset/1d77e1793aae98ad7b9719d48308176z>
+  a dcat:Dataset;
+  dct:creator <http://data.knowledgefactory.com/dataset/bregdcat/publisher/1d77e1793aae98ad7b9719d48308176z>;
+  dct:description "This module provides the A-Box of the Core Assessments Vocabulary."@en ;
+  dct:identifier "1d77e1793aae98ad7b9719d48308176z";
+  dct:modified "2023-09-01"^^xsd:date;
+  dct:publisher <http://data.knowledgefactory.com/dataset/bregdcat/publisher/1d77e1793aae98ad7b9719d48308176z>;
+  dct:title "Core Assessments Vocabulary A-Box"@en;
+  owl:versionInfo "1.1.0";
+  dcat:distribution <http://data.knowledgefactory.com/dataset/bregdcat/distribution/1d77e1793aae98ad7b9719d48308176z> .
+
+<http://data.knowledgefactory.com/dataset/bregdcat/publisher/1d77e1793aae98ad7b9719d48308176z>
+  a foaf:Agent;
+  skos:inScheme <http://publications.europa.eu/resource/authority/corporate-body>;
+  foaf:name "European Commission - ISA2, CAMSS Team" .
+
