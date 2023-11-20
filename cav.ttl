@@ -32,7 +32,7 @@
                                                                   rdfs:label "Core Assessment Vocabulary"@en ;
                                                                   rdfs:seeAlso <https://github.com/isa-camss/CAV> ,
                                                                                <https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav> ;
-                                                                  owl:versionInfo """Core Assessment Vocabulary version generated automatically from CAV.xml on 18/11/2020"""  ;
+                                                                  owl:versionInfo "1.1.0"  ;
                 skos:note "This file has been generated with the tool developed by the Publications Office of the European Union, which takes the UML representation of the core vocabulary as a basis"@en ;
                 .
 
