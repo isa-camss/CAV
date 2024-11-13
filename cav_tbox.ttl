@@ -1,0 +1,608 @@
+@prefix : <http://data.europa.eu/2sa/cav#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cv: <https://data.europa.eu/m8g/> .
+@prefix dc: <http://www.omg.org/spec/UML/20131001/UMLDC> .
+@prefix cav: <http://data.europa.eu/2sa/cav#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sch: <https://schema.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <http://data.europa.eu/2sa/cav#> .
+
+<http://data.europa.eu/2sa/cav#> rdf:type owl:Ontology ;
+                                  owl:versionIRI cav:CAV.xml-2022-07-25 ;
+                                  owl:imports dct: ,
+                                              rdfs: ,
+                                              skos: ,
+                                              dcat: ,
+                                              foaf: ;
+                                  cc:attributionName "European Commission" ;
+                                  dct:description "This module provides the definitions for the Core Assessment Vocabulary."@en ;
+                                  dct:issued "2024-11-29" ;
+                                  dct:license <http://creativecommons.org/licenses/by-sa/4.0/> ;
+                                  dct:mediator [ foaf:homepage "https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss" ;
+                                                 foaf:name "Common Assessment Method for Standards and Specifications (CAMSS)"
+                                               ] ;
+                                  dct:title "Core Assessment Vocabulary"@en ;
+                                  vann:preferredNamespacePrefix "cav" ;
+                                  vann:preferredNamespaceUri "http://data.europa.eu/2sa/cav#" ;
+                                  rdfs:label "Core Assessment Vocabulary"@en ;
+                                  rdfs:seeAlso <https://github.com/isa-camss/CAV> ,
+                                               <https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav> ;
+                                  owl:versionInfo "1.3.0" ;
+                                  skos:note "This file has been generated with Protégé."@en ;
+                                  foaf:maker [ rdf:type foaf:Person ;
+                                               foaf:firstName "Common Assessment Method for Standards and Specifications (CAMSS)"
+                                              ] .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#Literal
+rdfs:Literal owl:equivalentClass rdf:langString ,
+                                 xsd:date ,
+                                 xsd:dateTime ,
+                                 xsd:decimal ,
+                                 xsd:int ,
+                                 xsd:string .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type rdfs:Datatype .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+foaf:Document rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://data.europa.eu/2sa/cav#assesses
+cav:assesses rdf:type owl:ObjectProperty ;
+             rdfs:domain cav:Assessment ;
+             rdfs:range dcat:Resource ;
+             rdfs:comment "The reference to the asset(s) that are the object of the assessment."@en ;
+             rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+             rdfs:label "Assesses"@en ;
+             skos:definition "The reference to the asset(s) that are the object of the assessment."@en ;
+             skos:prefLabel "Assesses"@en .
+
+
+###  http://data.europa.eu/2sa/cav#assignedTo
+cav:assignedTo rdf:type owl:ObjectProperty ;
+               rdfs:domain cav:Score ;
+               rdfs:range cv:Criterion ;
+               rdfs:comment "The assignment of a value output to the criterion."@en ;
+               rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+               rdfs:label "Assigned to"@en ;
+               skos:definition "The assignment of a value output to the criterion."@en ;
+               skos:prefLabel "Assigned to"@en .
+
+
+###  http://data.europa.eu/2sa/cav#basedOn
+cav:basedOn rdf:type owl:ObjectProperty ;
+            rdfs:domain cav:Score ;
+            rdfs:range cav:EvaluationContext ;
+            rdfs:comment "The consideration of a specific evaluation context when assigning the score to a criterion."@en ;
+            rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+            rdfs:label "Based on"@en ;
+            skos:definition "The consideration of a specific evaluation context when assigning the score to a criterion."@en ;
+            skos:prefLabel "Based on"@en .
+
+
+###  http://data.europa.eu/2sa/cav#considers
+cav:considers rdf:type owl:ObjectProperty ;
+              rdfs:domain cav:Assessment ;
+              rdfs:range cav:Score ;
+              rdfs:comment "The evaluation of a criterion score in the context of the current assessment as input to issue one or more statements."@en ;
+              rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+              rdfs:label "Considers"@en ;
+              skos:definition "The evaluation of an assessment score as input to issue one or more statements."@en ;
+              skos:prefLabel "Considers"@en .
+
+
+###  http://data.europa.eu/2sa/cav#contextualisedBy
+cav:contextualisedBy rdf:type owl:ObjectProperty ;
+                     rdfs:domain cav:Assessment ;
+                     rdfs:range cav:Scenario ;
+                     rdfs:comment "The assignment of the scenario for the current assessment providing its context, purpose and criteria."@en ;
+                     rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                     rdfs:label "Contextualised by"@en ;
+                     skos:definition "The assignment of the scenario for the current assessment providing its context, purpose and criteria."@en ;
+                     skos:prefLabel "Contextualised by"@en .
+
+
+###  http://data.europa.eu/2sa/cav#contextualises
+cav:contextualises rdf:type owl:ObjectProperty ;
+                   rdfs:domain cav:EvaluationContext ;
+                   rdfs:range cv:Criterion ;
+                   rdfs:comment "The provision of context for the evaluation of the criterion."@en ;
+                   rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                   rdfs:label "Contextualises"@en ;
+                   skos:definition "The provision of context for the evaluation of the criterion."@en ;
+                   skos:prefLabel "Contextualises"@en .
+
+
+###  http://data.europa.eu/2sa/cav#definedBy
+cav:definedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf cav:defines ;
+              rdfs:domain cav:EvaluationContext ;
+              rdfs:range cav:Scenario ;
+              rdfs:comment "The link to the scenario that provides the evaluation context for one or more criteria"@en ;
+              rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+              rdfs:label "Defined by"@en ;
+              skos:definition "The link to the scenario that provides the evaluation context for one or more criteria."@en ;
+              skos:prefLabel "Defined by"@en .
+
+
+###  http://data.europa.eu/2sa/cav#defines
+cav:defines rdf:type owl:ObjectProperty ;
+            rdfs:domain cav:Scenario ;
+            rdfs:range cav:EvaluationContext ;
+            rdfs:comment "The link to the evaluation contexts for specific criteria provided by the given scenario."@en ;
+            rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+            rdfs:label "Defines"@en ;
+            skos:definition "The link to the evaluation contexts for specific criteria provided by the given scenario."@en ;
+            skos:prefLabel "Defines"@en .
+
+
+###  http://data.europa.eu/2sa/cav#definesSub
+cav:definesSub rdf:type owl:ObjectProperty ;
+               rdfs:domain cav:Scenario ;
+               rdfs:range cav:Scenario ;
+               rdfs:comment "The definition of nested scenarios grouped based on different sub-purposes, commonalities or particularities of the sub-sets of criteria."@en ;
+               rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+               rdfs:label "Defines sub"@en ;
+               skos:definition "The definition of nested scenarios grouped based on different sub-purposes, commonalities or particularities of the sub-sets of criteria."@en ;
+               skos:prefLabel "Defines subscenario"@en .
+
+
+###  http://data.europa.eu/2sa/cav#documentedIn
+cav:documentedIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain cav:Assessment ,
+                             cav:Asset ;
+                 rdfs:range rdfs:Resource ;
+                 rdfs:comment "A link to any information supporting the value of the asset and any other related relevant details."@en ;
+                 rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                 rdfs:label "Documented in"@en ;
+                 skos:definition "A link to any information supporting the value of the asset and any other related relevant details."@en ;
+                 skos:prefLabel "Documented in"@en .
+
+
+###  http://data.europa.eu/2sa/cav#formulatedBy
+cav:formulatedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain cav:Statement ;
+                 rdfs:range foaf:Agent ;
+                 rdfs:comment "The agent(s) that issue value judgement(s) resulting from the assessment."@en ;
+                 rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                 rdfs:label "Formulated by"@en ;
+                 skos:definition "The agent(s) that issue value judgement(s) resulting from the assessment."@en ;
+                 skos:prefLabel "Formulated by"@en .
+
+
+###  http://data.europa.eu/2sa/cav#hasInput
+cav:hasInput rdf:type owl:ObjectProperty ;
+             rdfs:domain cav:Score ;
+             rdfs:range rdfs:Resource ;
+             rdfs:comment "The different resources provided to feed the context for the evaluation of a criterion."@en ;
+             rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+             rdfs:label "Has input"@en ;
+             skos:definition "The different resources provided to feed the context for the evaluation of a criterion. "@en ;
+             skos:prefLabel "Has input"@en .
+
+
+###  http://data.europa.eu/2sa/cav#hasReport
+cav:hasReport rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dcat:distribution ;
+              rdfs:domain cav:Assessment ;
+              rdfs:range dcat:Distribution ;
+              rdfs:comment "A manifestation of all the information related to and resulting from an assessment."@en ;
+              rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+              rdfs:label "Has report"@en ;
+              skos:definition "A manifestation of all the information related to and resulting from an assessment."@en ;
+              skos:prefLabel "Has report"@en .
+
+
+###  http://data.europa.eu/2sa/cav#hasSummary
+cav:hasSummary rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf dcat:distribution ;
+               rdfs:domain cav:Assessment ;
+               rdfs:range dcat:Distribution ;
+               rdfs:comment "An abbreviated manifestation of the performed assessment."@en ;
+               rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+               rdfs:label "Has summary"@en ;
+               skos:definition "An abbreviated manifestation of the performed assessment."@en ;
+               skos:prefLabel "Has summary"@en .
+
+
+###  http://data.europa.eu/2sa/cav#includes
+cav:includes rdf:type owl:ObjectProperty ;
+             rdfs:domain cav:Scenario ;
+             rdfs:range cv:Criterion ;
+             rdfs:comment "The aggregation of criteria to one scenario or parts of it."@en ;
+             rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+             rdfs:label "Includes"@en ;
+             skos:definition "The aggregation of criteria to one scenario or parts of it."@en ;
+             skos:prefLabel "Includes"@en .
+
+
+###  http://data.europa.eu/2sa/cav#performedBy
+cav:performedBy rdf:type owl:ObjectProperty ;
+                rdfs:domain cav:Assessment ;
+                rdfs:range foaf:Agent ;
+                rdfs:comment "The agent(s) that carry out the assessment."@en ;
+                rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                rdfs:label "Performed by"@en ;
+                skos:definition "The agent(s) that carry out the assessment."@en ;
+                skos:prefLabel "Performed by"@en .
+
+
+###  http://data.europa.eu/2sa/cav#providedBy
+cav:providedBy rdf:type owl:ObjectProperty ;
+               owl:inverseOf cav:providesScore ;
+               rdfs:domain cav:Score ;
+               rdfs:range foaf:Agent ;
+               rdfs:comment "The agent assigning the score for a given criterion as part of the assessment."@en ;
+               rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+               rdfs:label "Provided by"@en ;
+               skos:definition "The agent assigning the score for a given criterion as part of the assessment."@en ;
+               skos:prefLabel "Provided by"@en .
+
+
+###  http://data.europa.eu/2sa/cav#providesScore
+cav:providesScore rdf:type owl:ObjectProperty ;
+                  rdfs:domain foaf:Agent ;
+                  rdfs:range cav:Score ;
+                  rdfs:comment "The agent providing a score for a given criterion as part of the assessment."@en ;
+                  rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                  rdfs:label "Provides score"@en ;
+                  skos:definition "The agent providing a score for a given criterion as part of the assessment."@en ;
+                  skos:prefLabel "Provides score"@en .
+
+
+###  http://data.europa.eu/2sa/cav#refersTo
+cav:refersTo rdf:type owl:ObjectProperty ;
+             rdfs:domain cav:Statement ;
+             rdfs:range cav:Scenario ,
+                        cav:Score ,
+                        cv:Criterion ;
+             rdfs:comment "The provision of a value judgement on one or more elements of the assessment."@en ;
+             rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+             rdfs:label "Refers to"@en ;
+             skos:definition "The provision of a value judgement on one or more elements of the assessment."@en ;
+             skos:prefLabel "Refers to"@en .
+
+
+###  http://data.europa.eu/2sa/cav#relatesTo
+cav:relatesTo rdf:type owl:ObjectProperty ;
+              rdfs:domain cav:EvaluationContext ;
+              rdfs:range rdfs:Resource ;
+              rdfs:comment "The context for a criterion related to a resource."@en ;
+              rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+              rdfs:label "Relates to"@en ;
+              skos:definition "The context for a criterion related to a resource."@en ;
+              skos:prefLabel "Relates to"@en .
+
+
+###  http://data.europa.eu/2sa/cav#requestedBy
+cav:requestedBy rdf:type owl:ObjectProperty ;
+                rdfs:domain cav:Assessment ;
+                rdfs:range foaf:Agent ;
+                rdfs:comment "The agent(s) requesting the assessment of an asset."@en ;
+                rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                rdfs:label "Requested by"@en ;
+                skos:definition "The agent(s) requesting the assessment of an asset."@en ;
+                skos:prefLabel "Requested by"@en .
+
+
+###  http://data.europa.eu/2sa/cav#resultsIn
+cav:resultsIn rdf:type owl:ObjectProperty ;
+              rdfs:domain cav:Assessment ;
+              rdfs:range cav:Statement ;
+              rdfs:comment "The creation of the statements resulting from the assessment."@en ;
+              rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+              rdfs:label "Results in"@en ;
+              skos:definition "The creation of the statements resulting from the assessment."@en ;
+              skos:prefLabel "Results in"@en .
+
+
+###  http://data.europa.eu/2sa/cav#triggeredFrom
+cav:triggeredFrom rdf:type owl:ObjectProperty ;
+                  owl:inverseOf cav:triggers ;
+                  rdfs:domain cav:Assessment ;
+                  rdfs:range cav:Assessment ;
+                  rdfs:comment "The event causing the current assessment as the result of another related assessment."@en ;
+                  rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                  rdfs:label "Triggered from"@en ;
+                  skos:definition "The event causing the current assessment as the result of another related assessment."@en ;
+                  skos:prefLabel "Triggered from"@en .
+
+
+###  http://data.europa.eu/2sa/cav#triggers
+cav:triggers rdf:type owl:ObjectProperty ;
+             rdfs:domain cav:Assessment ;
+             rdfs:range cav:Assessment ;
+             rdfs:comment "The event causing further related assessment(s) due to the current one."@en ;
+             rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+             rdfs:label "Triggers"@en ;
+             skos:definition "The event causing further related assessment(s) due to the current one."@en ;
+             skos:prefLabel "Triggers"@en .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+dcat:distribution rdf:type owl:ObjectProperty           
+                  rdfs:domain dcat:Dataset ;
+                  rdfs:range dcat:Distribution .
+
+###  https://schema.org/contactPoint
+sch:contactPoint rdf:type owl:ObjectProperty           
+                 rdfs:domain foaf:Agent ;
+                 rdfs:range sch:ContactPoint .
+
+
+###  https://www.w3.org/ns/dcat#previousVersion
+dcat:previousVersion rdf:type owl:ObjectProperty ;
+                      rdfs:domain cav:Assessment ;
+                      rdfs:range cav:Assessment ;
+                      rdfs:comment "The previous version of a resource in a lineage."@en ;
+                      rdfs:isDefinedBy <https://www.w3.org/ns/dcat#> ;
+                      rdfs:label "Previous version"@en ;
+                      skos:definition "The previous version of a resource in a lineage."@en ;
+                      skos:prefLabel "Previous version"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://data.europa.eu/2sa/cav#instructionDescription
+cav:instructionDescription rdf:type owl:DatatypeProperty ;
+                           rdfs:domain cav:EvaluationContext ;
+                           rdfs:range rdfs:Literal ;
+                           rdfs:comment "Guideline or description that needs to followed during the evaluation of one particular criterion."@en ;
+                           rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                           rdfs:label "Instruction description"@en ;
+                           skos:altLabel "Has instruction description"@en ;
+                           skos:definition "Guideline or description that needs to followed during the evaluation of one particular criterion."@en ;
+                           skos:prefLabel "Instruction description"@en .
+
+
+###  http://data.europa.eu/2sa/cav#interpretation
+cav:interpretation rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cav:Statement ;
+                   rdfs:range skos:Concept ;
+                   rdfs:comment "The favourability perception of the statement (e.g. positive, negative or neutral)."@en ;
+                   rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                   rdfs:label "Interpretation"@en ;
+                   skos:altLabel "Has interpretation"@en ;
+                   skos:definition "The favourability perception of the statement (e.g. positive, negative or neutral)."@en ;
+                   skos:prefLabel "Interpretation"@en .
+
+
+###  http://data.europa.eu/2sa/cav#judgement
+cav:judgement rdf:type owl:DatatypeProperty ;
+              rdfs:domain cav:Statement ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "The text expressing the statement’s resulting value judgement."@en ;
+              rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+              rdfs:label "Judgement"@en ;
+              skos:altLabel "Has judgement"@en ;
+              skos:definition "The text expressing the statement’s resulting value judgement."@en ;
+              skos:prefLabel "Judgement"@en .
+
+
+###  http://data.europa.eu/2sa/cav#purpose
+cav:purpose rdf:type owl:DatatypeProperty ;
+            rdfs:domain cav:Scenario ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "The reason for which the assessment is done."@en ;
+            rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+            rdfs:label "Purpose"@en ;
+            skos:altLabel "Has purpose"@en ;
+            skos:definition "The reason for which the assessment is done."@en ;
+            skos:prefLabel "Purpose"@en .
+
+
+###  http://data.europa.eu/2sa/cav#type
+cav:type rdf:type owl:DatatypeProperty ;
+         rdfs:domain cav:Statement ;
+         rdfs:range skos:Concept ;
+         rdfs:comment "The categorisation of the statement."@en ;
+         rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+         rdfs:label "Type"@en ;
+         skos:altLabel "Has type"@en ;
+         skos:definition "The categorisation of the statement."@en ;
+         skos:prefLabel "Type"@en .
+
+
+###  http://data.europa.eu/2sa/cav#value
+cav:value rdf:type owl:DatatypeProperty ;
+          rdfs:domain cav:Score ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "The literal representing the final score assigned to one criterion."@en ;
+          rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+          rdfs:label "Value"@en ;
+          skos:altLabel "Has value"@en ;
+          skos:definition "The literal representing the score assigned."@en ;
+          skos:prefLabel "Value"@en .
+
+
+###  http://data.europa.eu/2sa/cav#valueDescription
+cav:valueDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cav:Asset ;
+                     rdfs:range rdfs:Literal ;
+                     rdfs:comment "Brief description of the Asset."@en ;
+                     rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                     rdfs:label "Value description"@en ;
+                     skos:altLabel "Has value description"@en ;
+                     skos:definition "Brief description of the Asset."@en ;
+                     skos:prefLabel "Value description"@en .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:DatatypeProperty ;
+                rdfs:domain cav:Assessment .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:DatatypeProperty ;
+           rdfs:domain cav:Assessment ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain cav:Assessment ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.w3.org/ns/adms#status
+adms:status rdf:type owl:DatatypeProperty ;
+            rdfs:domain cav:Assessment ;
+            rdfs:range skos:Concept ;
+            rdfs:comment "The status of the Asset in the context of a particular workflow process."@en ;
+            rdfs:isDefinedBy <http://www.w3.org/ns/adms#> ;
+            rdfs:label "Status"@en ;
+            skos:altLabel "Has status"@en ;
+            skos:definition "The status of the Asset in the context of a particular workflow process."@en ;
+            skos:prefLabel "Status"@en .
+
+
+###  https://www.w3.org/ns/dcat#releaseDate
+dcat:releaseDate rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf dct:issued ;
+                  rdfs:domain cav:Assessment ;
+                  rdfs:range rdfs:Literal .
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:DatatypeProperty ;
+                  rdfs:domain cav:Assessment ;
+                  rdfs:range rdfs:Literal .
+
+
+###  https://www.w3.org/ns/dcat#version
+dcat:version rdf:type owl:DatatypeProperty ;
+              rdfs:domain cav:Assessment ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "The version indicator (name or identifier) of a resource."@en ;
+              rdfs:isDefinedBy dcat: ;
+              rdfs:label "Version"@en ;
+              skos:definition "The version indicator (name or identifier) of a resource."@en ;
+              skos:prefLabel "Version"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://data.europa.eu/2sa/cav#Assessment
+cav:Assessment rdf:type owl:Class ;
+               rdfs:subClassOf cav:Asset ;
+               rdfs:comment "The intellectual work to evaluate an asset against the criteria of a given scenario."@en ;
+               rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+               rdfs:label "Assessment"@en ;
+               skos:definition "The intellectual work to evaluate an asset against the criteria of a given scenario."@en ;
+               skos:prefLabel "Assessment"@en .
+
+
+###  http://data.europa.eu/2sa/cav#Asset
+cav:Asset rdf:type owl:Class ;
+          rdfs:subClassOf dcat:Dataset ;
+          rdfs:comment "A resource, probably resulting from a work, with purpose and value."@en ;
+          rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+          rdfs:label "Asset"@en ;
+          skos:definition "A resource, probably resulting from a work, with purpose and value."@en ;
+          skos:prefLabel "Asset"@en .
+
+
+###  http://data.europa.eu/2sa/cav#EvaluationContext
+cav:EvaluationContext rdf:type owl:Class ;
+                      rdfs:comment "The context for a criterion providing guidance on its evaluation considering the given scenario. This is used exceptionally to extend the context offered by the scenario when it is not sufficient for the evaluation of a given criterion. An criterion's evaluation produces an objective output that will then be considered to form value judgments expressed as the assessment's statements."@en ;
+                      rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+                      rdfs:label "Evaluation context"@en ;
+                      skos:definition "The context for a criterion providing guidance on its evaluation considering the given scenario. This is used exceptionally to extend the context offered by the scenario when it is not sufficient for the evaluation of a given criterion. An criterion's evaluation produces an objective output that will then be considered to form value judgments expressed as the assessment's statements."@en ;
+                      skos:prefLabel "Evaluation context"@en .
+
+
+###  http://data.europa.eu/2sa/cav#Scenario
+cav:Scenario rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Dataset ;
+             owl:disjointWith dcat:Dataset ;
+             rdfs:comment "The context of the assessment establishing its purpose, the organisation of criteria being evaluated, and its reference frameworks."@en ;
+             rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+             rdfs:label "Scenario"@en ;
+             skos:definition "The context of the assessment establishing its purpose, the organisation of criteria being evaluated, and its reference frameworks."@en ;
+             skos:prefLabel "Scenario"@en .
+
+
+###  http://data.europa.eu/2sa/cav#Score
+cav:Score rdf:type owl:Class ;
+          rdfs:comment "The value output assigned to the criterion as part of the assessment."@en ;
+          rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+          rdfs:label "Score"@en ;
+          skos:definition "The value output assigned to the criteria as part of the assessment."@en ;
+          skos:prefLabel "Score"@en .
+
+
+###  http://data.europa.eu/2sa/cav#Statement
+cav:Statement rdf:type owl:Class ;
+              rdfs:comment "A value judgement, resulting from the assessment, pertinent to its entirety or to one or more of its specific parts."@en ;
+              rdfs:isDefinedBy <http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c> ;
+              rdfs:label "Statement"@en ;
+              skos:definition "A value judgement, resulting from the assessment, pertinent to its entirety or to one or more of its specific parts."@en ;
+              skos:prefLabel "Statement"@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/adms#Asset
+foaf:Asset rdf:type owl:Class ;
+            owl:equivalentClass dcat:Dataset .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Resource .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+dcat:Distribution rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Resource
+dcat:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf foaf:Agent .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class .
+
+
+###  https://data.europa.eu/m8g/Criterion
+cv:Criterion rdf:type owl:Class .
+
+
+###  https://schema.org/ContactPoint
+sch:ContactPoint rdf:type owl:Class .
