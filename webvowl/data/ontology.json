@@ -1,0 +1,1896 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "https://data.europa.eu/m8g", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://data.europa.eu/2sa/cav", "http://www.w3.org/ns/dcat", "http://xmlns.com/foaf/0.1", "http://www.w3.org/ns/adms", "http://www.w3.org/2004/02/skos/core" ],
+    "iri" : "http://data.europa.eu/2sa/cav#",
+    "version" : "1.3.0",
+    "labels" : {
+      "en" : "Core Assessment Vocabulary"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by-sa/4.0/",
+        "type" : "iri"
+      } ],
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "This file has been generated with Protégé.",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "cav",
+        "type" : "label"
+      } ],
+      "attributionName" : [ {
+        "identifier" : "attributionName",
+        "language" : "undefined",
+        "value" : "European Commission",
+        "type" : "label"
+      } ],
+      "maker" : [ {
+        "identifier" : "maker",
+        "language" : "undefined",
+        "value" : "_:genid2147483660",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.3.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/2sa/cav#",
+        "type" : "label"
+      } ],
+      "mediator" : [ {
+        "identifier" : "mediator",
+        "language" : "undefined",
+        "value" : "_:genid2147483661",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/isa-camss/CAV",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://data.europa.eu/m8g/Criterion",
+    "baseIri" : "https://data.europa.eu/m8g",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Criterion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#Scenario",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Scenario",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The context of the assessment establishing its purpose, the organisation of criteria being evaluated, and its reference frameworks.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Scenario",
+      "en" : "Scenario"
+    },
+    "id" : "9",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#Asset",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Asset",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A resource, probably resulting from a work, with purpose and value.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Asset",
+      "en" : "Asset"
+    },
+    "subClasses" : [ "1" ],
+    "id" : "19",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#Statement",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Statement",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A value judgement, resulting from the assessment, pertinent to its entirety or to one or more of its specific parts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Statement",
+      "en" : "Statement"
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Resource",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "subClasses" : [ "16" ],
+    "attributes" : [ "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#Assessment",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Assessment",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The intellectual work to evaluate an asset against the criteria of a given scenario.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Assessment",
+      "en" : "Assessment"
+    },
+    "id" : "1",
+    "superClasses" : [ "19" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "19" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "18", "9" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "Concept"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "Concept"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Distribution",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Distribution"
+    },
+    "attributes" : [ "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "Concept"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#EvaluationContext",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Evaluation context",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The context for a criterion providing guidance on its evaluation considering the given scenario. This is used exceptionally to extend the context offered by the scenario when it is not sufficient for the evaluation of a given criterion. An criterion's evaluation produces an objective output that will then be considered to form value judgments expressed as the assessment's statements.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EvaluationContext",
+      "en" : "Evaluation context"
+    },
+    "id" : "8"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#Score",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Score",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The value output assigned to the criteria as part of the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Score",
+      "en" : "Score"
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "subClasses" : [ "19", "9" ],
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "https://schema.org/ContactPoint",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContactPoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://purl.org/dc/terms/issued",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "2",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Date of formal issuance of the Specification.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "issued",
+      "en" : "Issued"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#previousVersion",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Previous version",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The previous version of a resource in a lineage.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "previousVersion",
+      "en" : "Previous version"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#documentedIn",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Documented in",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A link to any information supporting the value of the asset and any other related relevant details.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "documentedIn",
+      "en" : "Documented in"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#definedBy",
+    "inverse" : "10",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Defined by",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The link to the scenario that provides the evaluation context for one or more criteria.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "definedBy",
+      "en" : "Defined by"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#type",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Type",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Has type",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The categorisation of the statement.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "type",
+      "en" : "Type"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#defines",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Defines",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The link to the evaluation contexts for specific criteria provided by the given scenario.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "defines",
+      "en" : "Defines"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#considers",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "18",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Considers",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The evaluation of an assessment score as input to issue one or more statements.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "considers",
+      "en" : "Considers"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#version",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Version",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The version indicator (name or identifier) of a resource.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "version",
+      "en" : "Version"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#providesScore",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "18",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Provides score",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The agent providing a score for a given criterion as part of the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "providesScore",
+      "en" : "Provides score"
+    },
+    "domain" : "15",
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#formulatedBy",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Formulated by",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The agent(s) that issue value judgement(s) resulting from the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "formulatedBy",
+      "en" : "Formulated by"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "range" : "16",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "24",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#distribution",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "distribution"
+    },
+    "domain" : "16",
+    "subproperty" : [ "29", "30" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "16",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#performedBy",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Performed by",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The agent(s) that carry out the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "performedBy",
+      "en" : "Performed by"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#hasInput",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Has input",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The different resources provided to feed the context for the evaluation of a criterion. ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInput",
+      "en" : "Has input"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://purl.org/dc/terms/description",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "35",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Brief description of the resource.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "Description"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "34"
+  }, {
+    "range" : "19",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#requestedBy",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Requested by",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The agent(s) requesting the assessment of an asset.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "requestedBy",
+      "en" : "Requested by"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#purpose",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Purpose",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The reason for which the assessment is done.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Has purpose",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "purpose",
+      "en" : "Purpose"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#relatesTo",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Relates to",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The context for a criterion related to a resource.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "relatesTo",
+      "en" : "Relates to"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#interpretation",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "47",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Interpretation",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The favourability perception of the statement (e.g. positive, negative or neutral).",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Has interpretation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "interpretation",
+      "en" : "Interpretation"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#valueDescription",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Value description",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Brief description of the Asset.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Has value description",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "valueDescription",
+      "en" : "Value description"
+    },
+    "domain" : "19",
+    "attributes" : [ "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#assignedTo",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Assigned to",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The assignment of a value output to the criterion.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "assignedTo",
+      "en" : "Assigned to"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#assesses",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Assesses",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The reference to the asset(s) that are the object of the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "assesses",
+      "en" : "Assesses"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#judgement",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "50",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Judgement",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Has judgement",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The text expressing the statement’s resulting value judgement.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "judgement",
+      "en" : "Judgement"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/ns/adms#status",
+    "baseIri" : "http://www.w3.org/ns/adms",
+    "range" : "44",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/adms#",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Status",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The status of the Asset in the context of a particular workflow process.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "status",
+      "en" : "Status"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#definesSub",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Defines subscenario",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The definition of nested scenarios grouped based on different sub-purposes, commonalities or particularities of the sub-sets of criteria.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "definesSub",
+      "en" : "Defines sub"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#providedBy",
+    "inverse" : "22",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Provided by",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The agent assigning the score for a given criterion as part of the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "providedBy",
+      "en" : "Provided by"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "range" : "16",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#hasSummary",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "28",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Has summary",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An abbreviated manifestation of the performed assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSummary",
+      "en" : "Has summary"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#basedOn",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Based on",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The consideration of a specific evaluation context when assigning the score to a criterion.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "basedOn",
+      "en" : "Based on"
+    },
+    "domain" : "18",
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#value",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "54",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Value",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The literal representing the score assigned.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Has value",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "value",
+      "en" : "Value"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#triggeredFrom",
+    "inverse" : "63",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Triggered from",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The event causing the current assessment as the result of another related assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "triggeredFrom",
+      "en" : "Triggered from"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#includes",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Includes",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The aggregation of criteria to one scenario or parts of it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "includes",
+      "en" : "Includes"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#releaseDate",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "43",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Date of formal issuance (e.g., publication) of the Specification.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "releaseDate",
+      "en" : "Release date"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#instructionDescription",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "59",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Instruction description",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Has instruction description",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Guideline or description that needs to followed during the evaluation of one particular criterion.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "instructionDescription",
+      "en" : "Instruction description"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#resultsIn",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Results in",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The creation of the statements resulting from the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "resultsIn",
+      "en" : "Results in"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://schema.org/contactPoint",
+    "baseIri" : "https://schema.org",
+    "range" : "69",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A contact point for a person or organisation.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contactPoint",
+      "en" : "Contact point"
+    },
+    "domain" : "15",
+    "attributes" : [ "external", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#hasReport",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "28",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Has report",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A manifestation of all the information related to and resulting from an assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasReport",
+      "en" : "Has report"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#triggers",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Triggers",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The event causing further related assessment(s) due to the current one.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "triggers",
+      "en" : "Triggers"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#contextualises",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Contextualises",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The provision of context for the evaluation of the criterion.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contextualises",
+      "en" : "Contextualises"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#contextualisedBy",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Contextualised by",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The assignment of the scenario for the current assessment providing its context, purpose and criteria.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contextualisedBy",
+      "en" : "Contextualised by"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://data.europa.eu/2sa/cav#refersTo",
+    "baseIri" : "http://data.europa.eu/2sa/cav",
+    "range" : "40",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Refers to",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The provision of a value judgement on one or more elements of the assessment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "refersTo",
+      "en" : "Refers to"
+    },
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://purl.org/dc/terms/title",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "41",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A name given to the resource.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "Title"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "73"
+  } ]
+}
