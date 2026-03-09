@@ -26,27 +26,7 @@ CAV addresses these challenges by providing:
 ✅ **Semantic interoperability** through reuse of established vocabularies  
 ✅ **Traceability** from reference frameworks through criteria to outcomes  
 
-## 🚀 Key Use Cases
-
-#### 1. **Standards and Specifications Assessment (CAMSS)**
-The primary use case driving CAV development.
-
-#### 2. **Digital Solution Assessment**
-For assessing software systems and platforms.
-
-#### 3. **Public Service Assessment**
-For evaluating digital public services.
-
-#### 4. **Policy and Governance Evaluation**
-For organisational and policy assessments.
-
-#### 5. **Knowledge Management and Decision Support**
-For organisational learning and improvement.
-
-#### 6. **Research and Academia**
-For structured evaluation in research contexts.
-
-## 🏗️ Architecture and Design Principles
+## 🏗️ Design Principles
 CAV is built on two fundamental principles.
 
 ### 1. **Consistent Reuse**
@@ -86,11 +66,8 @@ CAV/
 
 ## 🌍 Relationship to Other Initiatives
 
-### CAMSS (Common Assessment Method for Standards and Specifications)
-CAV supports Digital Europe's goals for interoperable digital public services through structured assessment capabilities.
-
 ### SEMIC
-CAV is one of the core vocabularies, alongside other vocabularies developed by SEMIC.
+The CAV, even though is evolved and maintained by the CAMSS Action, it is part of the Core Vocabularies that SEMIC is providing. All of them, including the CAV are labelled as Interoperable European Solutions (IES)
 
 ## 📚 Additional and Learning Resources
 
@@ -120,7 +97,7 @@ CAV has been developed through public consultation with input from various stake
 For questions, feedback, or collaboration opportunities:
 - Open an issue in this repository
 - Visit the [Interoperable Europe Portal](https://interoperable-europe.ec.europa.eu/)
-- Contact the CAMSS team through official channels
+- Contact the CAMSS team through official channels: DIGIT-CAMSS@ec.europa.eu
 - Join the CAMSS community discussions
 
 ## 🔄 Version History
@@ -135,6 +112,6 @@ See the full release history [here](https://interoperable-europe.ec.europa.eu/co
 
 ---
 
-**Maintained by**: ISA² Programme / Interoperable Europe  
+**Maintained by**: DIGIT.B2  
 **Last Updated**: 2026  
 **Status**: Active development and maintenance
