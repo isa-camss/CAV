@@ -67,10 +67,10 @@ $(function(){
 <div style="display: flex; align-items: center; gap: 10px;">
    <h1 style="margin: 0;">Core Assessment Vocabulary</h1>
    <a href="#">
-     <img src="./image/CAV.png" alt="CAV Logo" style="width: 100px; height: auto;" />
+     <img src="image/CAV.png" alt="CAV Logo" style="width: 100px; height: auto;" />
    </a>
  </div>
-<h2>Release: 21/03/2025</h2>
+<h2>Release: 30/01/2026</h2>
 
 
 <dl>
@@ -79,23 +79,23 @@ $(function(){
 <dt>Latest version:</dt>
 <dd><a href="http://data.europa.eu/2sa/cav#">http://data.europa.eu/2sa/cav#</a></dd>
 <dt>Revision:</dt>
-<dd>1.3.0</dd>
+<dd>1.4.0</dd>
 <dt>Issued on:</dt>
-<dd>21/03/2025</dd>
+<dd>30/01/2026</dd>
 <dt>See also:</dt>
 <dd><a href="https://github.com/isa-camss/CAV">https://github.com/isa-camss/CAV</a></dd><dd><a href="https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav">https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav</a></dd>
 
-<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-Creative%20Commons%204.0-blue.svg" alt="http://creativecommons.org/licenses/by-sa/4.0/" /></a>
+<dt>Download serialization:</dt><dd><span><a href="http://data.europa.eu/2sa/cav#" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-Creative%20Commons%204.0-blue.svg" alt="http://creativecommons.org/licenses/by-sa/4.0/" /></a>
 </dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd> Core Assessment Vocabulary. Revision: 1.3.0. Retrieved from: http://data.europa.eu/2sa/cav#</dd>
+<dd> Core Assessment Vocabulary. Revision: 1.4.0. Retrieved from: http://data.europa.eu/2sa/cav#</dd>
 </dl>
 
 <hr/>
 </div>
 <div class="status">
 <div>
-<span>CAV 1.3.0</span>
+<span>CAV 1.4.0</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
    CAV represents and defines what an “Assessment” of “assets” is and how to perform the assessment based on “Criteria”. It is a domain-agnostic vocabulary, meaning that it can be used to assess any type of assets. It is an European Commission solution.</div>
@@ -156,7 +156,7 @@ $(function(){
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <div style="text-align: center;">
-   <img src="./image/CAV_UML_v1.3.0.png" alt="CSSV UML" style="width: 80%; max-width: 1200px; height: auto;" />
+   <img src="image/CAV_UML_v1.4.0.png" alt="CSSV UML" style="width: 80%; max-width: 1200px; height: auto;" />
  </div>
 <h4>Classes</h4>
 <ul xmlns:widoco="https://w3id.org/widoco/vocab#"
@@ -195,7 +195,7 @@ This ontology has the following classes and properties.</span>
       <a href="#assignedTo" title="http://data.europa.eu/2sa/cav#assignedTo">Assigned to</a>
    </li>
    <li>
-      <a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a>
+      <a href="#ratedIn" title="http://data.europa.eu/2sa/cav#ratedIn">Based on</a>
    </li>
    <li>
       <a href="#considers" title="http://data.europa.eu/2sa/cav#considers">Considers</a>
@@ -204,8 +204,8 @@ This ontology has the following classes and properties.</span>
       <a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">Contact point</a>
    </li>
    <li>
-      <a href="#contextualisedBy" title="http://data.europa.eu/2sa/cav#contextualisedBy">Contextualised by</a>
-   </li>
+      <a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a>
+   </li>   
    <li>
       <a href="#contextualises" title="http://data.europa.eu/2sa/cav#contextualises">Contextualises</a>
    </li>
@@ -251,7 +251,10 @@ This ontology has the following classes and properties.</span>
       <a href="#providedBy" title="http://data.europa.eu/2sa/cav#providedBy">Provided by</a>
    </li>
    <li>
-      <a href="#providesScore" title="http://data.europa.eu/2sa/cav#providesScore">Provides score</a>
+      <a href="#provides" title="http://data.europa.eu/2sa/cav#provides">Provides score</a>
+   </li>
+   <li>
+      <a href="#ratedIn" title="http://data.europa.eu/2sa/cav#ratedIn">Rated in</a>
    </li>
    <li>
       <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a>
@@ -321,27 +324,43 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">Core Assessment Vocabulary: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-      <p>
-         A CAV Assessment is a specialization of an Asset, which is itself also a specialization of the <code>dcat:Dataset</code> and, by extension, of <code>dcat:Resource</code>. As any <code>adms:Asset</code>, the Assessment can be identified and described, and has individuals' distributions, publishers, etc. Additionally, to these properties, the <code>cav:Assessment</code> needs to specify who are the requestors and evaluators of the Assessments. These can be anything represented by a <code>foaf:Agent</code>, such as a natural person, a group, or an organization. Notice that the objects assessed are also Resources, meaning that the CAV may be used to assess anything that is considered a valuable resource. Examples of such resources could be products, services, or, in the case of CAMSS, standards and specifications.
-       </p>
-       
-       <p>
-         An Assessment results in Statements capturing the produced knowledge and providing value judgments. These can refer to the Assessment as a whole or a specific section, even being as detailed as to refer to individual evaluated criteria.
-       </p>
-       
-       <p>
-         A <code>cv:Criterion</code> is typically derived from a Reference Framework, which is to be understood as a series of “agreed and descriptive reference requirements” coming from one or more sources (e.g., legislation, specifications and standards, ICT policy-related works like the EIF within the EIS, etc.). Throughout the Assessment, each <code>cv:Criterion</code> is assigned a <code>cav:Score</code> (in principle by humans, but potentially also by systems) as the value output that is considered when formulating the resulting Statement(s). The <code>cav:Score</code> can take into consideration any resource input (e.g., when the score is calculated based on different input parameters, algorithms, and formulae).
-       </p>
-       
-       <p>
-         Any Assessment is performed in the context of a <code>cav:Scenario</code>. The Scenario defines the purpose of the Assessment and the set of Criteria to be scored by one or more Agents. Scenarios can be defined with a flexible structure, including nested sections (represented as sub-Scenarios) that serve to provide additional context, group thematically Criteria, and be referred to by the assessment’s resulting Statement(s). Criteria can themselves be simple or complex and originate from various reference sources. The overall context for the evaluation of the Criteria is provided by the Scenario; however, in case certain Criteria require additional contextualization or evaluation instructions, these can exceptionally be provided by means of an <code>cav:EvaluationContext</code>, which is related to a resource. Moreover, an Assessment might trigger another related Assessment of different content, which has its own Scenario and Criteria.
-       </p>
-       
-       <p>
-         Finally, an Assessment has a <code>dct:title</code> and a <code>dct:description</code> to facilitate the identification of the Asset. Note that it is also possible to model work in progress, expressed by having the Assessment define optional links to Scores, Statements, reports, and summaries. The versioning of an Assessment is represented by the <code>dcat:version</code> to keep track of the current version of the Assessment and its relationship with a previous one; setting up the <code>dct:issued</code> (assessment performance date) and the <code>dcat:releaseDate</code> (assessment publication date) of the Assessment is also recommended, where the CAV reuses the <code>dct:issued</code> (date) property for both.
-       </p>
+<p>
+   A CAV Assessment is a specialisation of an Asset, which is itself also a specialisation of the <code>dcat:Dataset</code> and by extension of <code>dcat:Resource</code>. 
+</p>
    
+<p>
+   RDFS(RDF Schema) provides a basic vocabulary for defining classes and properties of a resource. Within this framework, an <code>rdfs:Resource</code> represents the most general concept, capable of describing anything.
+</p>
 
+<p>
+   CAV, however, needs to clearly delimit which resources are subject to assessment, and it does so by relying on widely accepted standards. DCAT builds on the abstract notion of a resource and makes it operational for data catalogues. Since the subject of an assessment is intended to be a dataset or a service, a <code>cav:Assessment</code> assesses a <code>dcat:Resource</code>.
+</p>
+
+<p>
+   In parallel, ADMS adopts a more general perspective, allowing an <code>rdfs:Resource</code> to describe its own content; in this case, the resource is implicitly represented as an <code>adms:Asset</code>. Because an <code>adms:Asset</code> can be catalogued —and is therefore considered a <code>dcat:Dataset</code>, and because a <code>cav:Assessment</code> is itself meant to be catalogued, it follows logically that any assessment of a resource becomes an asset. This ensures full alignment with the ADMS specification.
+</p>
+
+<p>
+   This alignment is important because CAV assessments are published in catalogues like the Interoperable Europe Portal. Using <code>adms:Asset</code> helps CAV avoid repeating existing concepts, keeps the vocabulary consistent, and makes it easier to connect with other frameworks. As a result, CAV assets will be preserved on the basis of documenting and making them compatible with CCCEV.
+</p>
+
+<p>
+   As any ADMS Asset, the Assessment can be identified and described, and has individuals’ distributions, publishers, etc.  Additionally to these properties the CAV class Assessment needs to specify who are the requestors and evaluators of the Assessments. These can be anything represented by a FOAF  Agent, such as a natural person, a group or an organisation. Notice that the objects assessed are also Resources  meaning that the CAV may be used to assess anything that is considered a valuable resource . Example of such resources could be products, services, or, in the case of CAMSS, standards and specifications.
+</p>
+
+<p>
+   An Assessment results in Statements capturing the produced knowledge and providing value judgments. These can refer to the Assessment as a whole or a specific section, even being as detailed as to refer to individual evaluated criteria. 
+</p>
+
+<p>
+  A Criterion  is typically derived from a Reference Framework, which is to be understood as a series of “agreed and descriptive reference requirements” coming from one or more sources (e.g., legislation, specifications and standards, ICT policy-related works like the EIF within the EIS, etc.). Throughout the Assessment each Criterion is assigned a Score (in principle by humans, but potentially also by systems) as the value output that is considered when formulating the resulting Statement(s). The Score can take into consideration any resource  input (e.g., when the score is calculated based on different input parameters, algorithms, and formulae). 
+</p>
+
+<p>
+   Any Assessment is performed in the context of a Scenario. The Scenario defines the purpose of the Assessment and the set of Criteria to be scored by one or more Agents. Scenarios can be defined with a flexible structure including nested sections (represented as sub-Scenarios) that serve to provide additional context, group thematically Criteria and be referred to by the assessment’s resulting Statement(s). Criteria can themselves be simple or complex and originate from various reference sources. The overall context for the evaluation of the Criteria is provided by the Scenario, however in case certain Criteria require additional contextualisation or evaluation instructions these can exceptionally be provided by means of Evaluation Context which is related to a resource . Moreover, an Assessment might trigger another related Assessment of different content which has its own Scenario and Criteria. Finally, an Assessment has a title and a description to facilitate the identification of the Asset. Note that it is also possible to model work in progress, expressed by having the Assessment defining optional links to Scores, Statements, reports and summaries. The versioning of an Assessment is represented by the version datatype property of DCAT to keep track of the current version of the Assessment and its relationship with a previous one; setting up the issued date (assessment performance date) and the release date (assessment publication date) of the Assessment is also recommended, where the CAV reuses the DCTerms issued (date) property for both.
+</p>
+
+   
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Core Assessment Vocabulary classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Core Assessment Vocabulary.
@@ -381,7 +400,7 @@ This section provides details for each class and property defined by Core Assess
     is in domain of
    </dt>
    <dd>
-    <a href="#assesses" title="http://data.europa.eu/2sa/cav#assesses">Assesses</a> <sup class="type-op" title="object property">op</sup>, <a href="#considers" title="http://data.europa.eu/2sa/cav#considers">Considers</a> <sup class="type-op" title="object property">op</sup>, <a href="#contextualisedBy" title="http://data.europa.eu/2sa/cav#contextualisedBy">Contextualised by</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">Description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#documentedIn" title="http://data.europa.eu/2sa/cav#documentedIn">Documented in</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReport" title="http://data.europa.eu/2sa/cav#hasReport">Has report</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSummary" title="http://data.europa.eu/2sa/cav#hasSummary">Has summary</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">Issued</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#performedBy" title="http://data.europa.eu/2sa/cav#performedBy">Performed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#previousVersion" title="http://www.w3.org/ns/dcat#previousVersion">Previous version</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#releaseDate" title="http://www.w3.org/ns/dcat#releaseDate">Release date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#requestedBy" title="http://data.europa.eu/2sa/cav#requestedBy">Requested by</a> <sup class="type-op" title="object property">op</sup>, <a href="#resultsIn" title="http://data.europa.eu/2sa/cav#resultsIn">Results in</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/adms#status" title="http://www.w3.org/ns/adms#status">Status</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#triggeredFrom" title="http://data.europa.eu/2sa/cav#triggeredFrom">Triggered from</a> <sup class="type-op" title="object property">op</sup>, <a href="#triggers" title="http://data.europa.eu/2sa/cav#triggers">Triggers</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">Version</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#assesses" title="http://data.europa.eu/2sa/cav#assesses">Assesses</a> <sup class="type-op" title="object property">op</sup>, <a href="#considers" title="http://data.europa.eu/2sa/cav#considers">Considers</a> <sup class="type-op" title="object property">op</sup>, <a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">Description</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#documentedIn" title="http://data.europa.eu/2sa/cav#documentedIn">Documented in</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReport" title="http://data.europa.eu/2sa/cav#hasReport">Has report</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSummary" title="http://data.europa.eu/2sa/cav#hasSummary">Has summary</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">Issued</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#performedBy" title="http://data.europa.eu/2sa/cav#performedBy">Performed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#previousVersion" title="http://www.w3.org/ns/dcat#previousVersion">Previous version</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#releaseDate" title="http://www.w3.org/ns/dcat#releaseDate">Release date</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#requestedBy" title="http://data.europa.eu/2sa/cav#requestedBy">Requested by</a> <sup class="type-op" title="object property">op</sup>, <a href="#resultsIn" title="http://data.europa.eu/2sa/cav#resultsIn">Results in</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/adms#status" title="http://www.w3.org/ns/adms#status">Status</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#triggeredFrom" title="http://data.europa.eu/2sa/cav#triggeredFrom">Triggered from</a> <sup class="type-op" title="object property">op</sup>, <a href="#triggers" title="http://data.europa.eu/2sa/cav#triggers">Triggers</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">Version</a> <sup class="type-dp" title="datatype property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -410,7 +429,7 @@ This section provides details for each class and property defined by Core Assess
     has super-classes
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+    <a href="http://www.w3.org/ns/adms#Asset" title="http://www.w3.org/ns/adms#Asset">Asset</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has sub-classes
@@ -422,7 +441,7 @@ This section provides details for each class and property defined by Core Assess
     is in domain of
    </dt>
    <dd>
-    <a href="#documentedIn" title="http://data.europa.eu/2sa/cav#documentedIn">Documented in</a> <sup class="type-op" title="object property">op</sup>, <a href="#valueDescription" title="http://data.europa.eu/2sa/cav#valueDescription">Value description</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#documentedIn" title="http://data.europa.eu/2sa/cav#documentedIn">Documented in</a> <sup class="type-op" title="object property">op</sup>, <a href="#valueDescription" title="http://data.europa.eu/2sa/cav#valueDescription">Value description</a> <sup class="type-dp" title="datatype property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -475,13 +494,13 @@ This section provides details for each class and property defined by Core Assess
     is in domain of
    </dt>
    <dd>
-    <a href="#contextualises" title="http://data.europa.eu/2sa/cav#contextualises">Contextualises</a> <sup class="type-op" title="object property">op</sup>, <a href="#definedBy" title="http://data.europa.eu/2sa/cav#definedBy">Defined by</a> <sup class="type-op" title="object property">op</sup>, <a href="#instructionDescription" title="http://data.europa.eu/2sa/cav#instructionDescription">Instruction description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#relatesTo" title="http://data.europa.eu/2sa/cav#relatesTo">Relates to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#contextualises" title="http://data.europa.eu/2sa/cav#contextualises">Contextualises</a> <sup class="type-op" title="object property">op</sup>, <a href="#definedBy" title="http://data.europa.eu/2sa/cav#definedBy">Defined by</a> <sup class="type-op" title="object property">op</sup>, <a href="#instructionDescription" title="http://data.europa.eu/2sa/cav#instructionDescription">Instruction description</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#relatesTo" title="http://data.europa.eu/2sa/cav#relatesTo">Relates to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a> <sup class="type-op" title="object property">op</sup>, <a href="#defines" title="http://data.europa.eu/2sa/cav#defines">Defines</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#ratedIn" title="http://data.europa.eu/2sa/cav#ratedIn">Rated in</a> <sup class="type-op" title="object property">op</sup>, <a href="#defines" title="http://data.europa.eu/2sa/cav#defines">Defines</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -510,13 +529,16 @@ This section provides details for each class and property defined by Core Assess
     is in domain of
    </dt>
    <dd>
-    <a href="#defines" title="http://data.europa.eu/2sa/cav#defines">Defines</a> <sup class="type-op" title="object property">op</sup>, <a href="#definesSub" title="http://data.europa.eu/2sa/cav#definesSub">Defines sub</a> <sup class="type-op" title="object property">op</sup>, <a href="#includes" title="http://data.europa.eu/2sa/cav#includes">Includes</a> <sup class="type-op" title="object property">op</sup>, <a href="#purpose" title="http://data.europa.eu/2sa/cav#purpose">Purpose</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#defines" title="http://data.europa.eu/2sa/cav#defines">Defines</a> <sup class="type-op" title="object property">op</sup>, <a href="#definesSub" title="http://data.europa.eu/2sa/cav#definesSub">Defines sub</a> <sup class="type-op" title="object property">op</sup>, <a href="#includes" title="http://data.europa.eu/2sa/cav#includes">Includes</a> <sup class="type-op" title="object property">op</sup>, <a href="#purpose" title="http://data.europa.eu/2sa/cav#purpose">Purpose</a> <sup class="type-dp" title="datatype property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#contextualisedBy" title="http://data.europa.eu/2sa/cav#contextualisedBy">Contextualised by</a> <sup class="type-op" title="object property">op</sup>, <a href="#definedBy" title="http://data.europa.eu/2sa/cav#definedBy">Defined by</a> <sup class="type-op" title="object property">op</sup>, <a href="#definesSub" title="http://data.europa.eu/2sa/cav#definesSub">Defines sub</a> <sup class="type-op" title="object property">op</sup>, <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a> <sup class="type-op" title="object property">op</sup>, <a href="#definedBy" title="http://data.europa.eu/2sa/cav#definedBy">Defined by</a> <sup class="type-op" title="object property">op</sup>, <a href="#definesSub" title="http://data.europa.eu/2sa/cav#definesSub">Defines sub</a> <sup class="type-op" title="object property">op</sup>, <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dd>
+   <a href="#definedBy" title="http://data.europa.eu/2sa/cav#definedBy">Defined by</a> <sup class="type-op" title="object property">op</sup>, <a href="#definesSub" title="http://data.europa.eu/2sa/cav#definesSub">Defines sub</a> <sup class="type-op" title="object property">op</sup>, <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -545,13 +567,13 @@ This section provides details for each class and property defined by Core Assess
     is in domain of
    </dt>
    <dd>
-    <a href="#assignedTo" title="http://data.europa.eu/2sa/cav#assignedTo">Assigned to</a> <sup class="type-op" title="object property">op</sup>, <a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInput" title="http://data.europa.eu/2sa/cav#hasInput">Has input</a> <sup class="type-op" title="object property">op</sup>, <a href="#providedBy" title="http://data.europa.eu/2sa/cav#providedBy">Provided by</a> <sup class="type-op" title="object property">op</sup>, <a href="#value" title="http://data.europa.eu/2sa/cav#value">Value</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#assignedTo" title="http://data.europa.eu/2sa/cav#assignedTo">Assigned to</a> <sup class="type-op" title="object property">op</sup>, <a href="#ratedIn" title="http://data.europa.eu/2sa/cav#ratedIn">Based on</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInput" title="http://data.europa.eu/2sa/cav#hasInput">Has input</a> <sup class="type-op" title="object property">op</sup>, <a href="#providedBy" title="http://data.europa.eu/2sa/cav#providedBy">Provided by</a> <sup class="type-op" title="object property">op</sup>, <a href="#value" title="http://data.europa.eu/2sa/cav#value">Value</a> <sup class="type-dp" title="datatype property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#considers" title="http://data.europa.eu/2sa/cav#considers">Considers</a> <sup class="type-op" title="object property">op</sup>, <a href="#providesScore" title="http://data.europa.eu/2sa/cav#providesScore">Provides score</a> <sup class="type-op" title="object property">op</sup>, <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#considers" title="http://data.europa.eu/2sa/cav#considers">Considers</a> <sup class="type-op" title="object property">op</sup>, <a href="#provides" title="http://data.europa.eu/2sa/cav#provides">Provides score</a> <sup class="type-op" title="object property">op</sup>, <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -574,7 +596,7 @@ This section provides details for each class and property defined by Core Assess
     is in domain of
    </dt>
    <dd>
-    <a href="#formulatedBy" title="http://data.europa.eu/2sa/cav#formulatedBy">Formulated by</a> <sup class="type-op" title="object property">op</sup>, <a href="#interpretation" title="http://data.europa.eu/2sa/cav#interpretation">Interpretation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#judgement" title="http://data.europa.eu/2sa/cav#judgement">Judgement</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a> <sup class="type-op" title="object property">op</sup>, <a href="#type" title="http://data.europa.eu/2sa/cav#type">Type</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#formulatedBy" title="http://data.europa.eu/2sa/cav#formulatedBy">Formulated by</a> <sup class="type-op" title="object property">op</sup>, <a href="#interpretation" title="http://data.europa.eu/2sa/cav#interpretation">Interpretation</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#judgement" title="http://data.europa.eu/2sa/cav#judgement">Judgement</a> <sup class="type-dp" title="datatype property">dp</sup>, <a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a> <sup class="type-op" title="object property">op</sup>, <a href="#type" title="http://data.europa.eu/2sa/cav#type">Type</a> <sup class="type-dp" title="datatype property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -589,10 +611,10 @@ This section provides details for each class and property defined by Core Assess
  <ul class="hlist">
   <li><a href="#assesses" title="http://data.europa.eu/2sa/cav#assesses">Assesses</a></li>
   <li><a href="#assignedTo" title="http://data.europa.eu/2sa/cav#assignedTo">Assigned to</a></li>
-  <li><a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a></li>
+  <li><a href="#ratedIn" title="http://data.europa.eu/2sa/cav#ratedIn">Rated in</a></li>
   <li><a href="#considers" title="http://data.europa.eu/2sa/cav#considers">Considers</a></li>
   <li><a href="#https://schema.org/contactPoint" title="https://schema.org/contactPoint">Contact point</a></li>
-  <li><a href="#contextualisedBy" title="http://data.europa.eu/2sa/cav#contextualisedBy">Contextualised by</a></li>
+  <li><a href="#basedOn" title="http://data.europa.eu/2sa/cav#basedOn">Based on</a></li>
   <li><a href="#contextualises" title="http://data.europa.eu/2sa/cav#contextualises">Contextualises</a></li>
   <li><a href="#definedBy" title="http://data.europa.eu/2sa/cav#definedBy">Defined by</a></li>
   <li><a href="#defines" title="http://data.europa.eu/2sa/cav#defines">Defines</a></li>
@@ -607,7 +629,8 @@ This section provides details for each class and property defined by Core Assess
   <li><a href="#performedBy" title="http://data.europa.eu/2sa/cav#performedBy">Performed by</a></li>
   <li><a href="#http://www.w3.org/ns/dcat#previousVersion" title="http://www.w3.org/ns/dcat#previousVersion">Previous version</a></li>
   <li><a href="#providedBy" title="http://data.europa.eu/2sa/cav#providedBy">Provided by</a></li>
-  <li><a href="#providesScore" title="http://data.europa.eu/2sa/cav#providesScore">Provides score</a></li>
+  <li><a href="#provides" title="http://data.europa.eu/2sa/cav#provides">Provides score</a></li>
+  <li><a href="#ratedIn" title="http://data.europa.eu/2sa/cav#ratedIn">Rated in</a></li>
   <li><a href="#refersTo" title="http://data.europa.eu/2sa/cav#refersTo">Refers to</a></li>
   <li><a href="#relatesTo" title="http://data.europa.eu/2sa/cav#relatesTo">Relates to</a></li>
   <li><a href="#requestedBy" title="http://data.europa.eu/2sa/cav#requestedBy">Requested by</a></li>
@@ -677,9 +700,9 @@ This section provides details for each class and property defined by Core Assess
    </dl>
   </div>
  </div>
- <div class="entity" id="basedOn">
+ <div class="entity" id="ratedIn">
   <h3>Based on<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#basedOn</p>
+  <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#ratedIn</p>
   <div class="comment">
    <span class="markdown">The consideration of a specific evaluation context when assigning the score to a criterion.</span>
   </div>
@@ -762,9 +785,9 @@ This section provides details for each class and property defined by Core Assess
    </dl>
   </div>
  </div>
- <div class="entity" id="contextualisedBy">
-  <h3>Contextualised by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#contextualisedBy</p>
+ <div class="entity" id="basedOn">
+  <h3>Based on<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#basedOn</p>
   <div class="comment">
    <span class="markdown">The assignment of the scenario for the current assessment providing its context, purpose and criteria.</span>
   </div>
@@ -1222,7 +1245,7 @@ This section provides details for each class and property defined by Core Assess
   <h3>Provided by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#providedBy</p>
   <div class="comment">
-   <span class="markdown">The agent assigning the score for a given criterion as part of the assessment.</span>
+   <span class="markdown">Relates a score to the responsible agent that assigned it for a given criterion in the context of an assessment.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1250,16 +1273,16 @@ This section provides details for each class and property defined by Core Assess
      is inverse of
     </dt>
     <dd>
-     <a href="#providesScore" title="http://data.europa.eu/2sa/cav#providesScore">Provides score</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#provides" title="http://data.europa.eu/2sa/cav#provides">Provides score</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="providesScore">
-  <h3>Provides score<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#providesScore</p>
+ <div class="entity" id="provides">
+  <h3>Provides<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#provides</p>
   <div class="comment">
-   <span class="markdown">The agent providing a score for a given criterion as part of the assessment.</span>
+   <span class="markdown">Relates a responsible agent to a score it assigns for a given criterion in the context of an assessment.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1288,6 +1311,37 @@ This section provides details for each class and property defined by Core Assess
     </dt>
     <dd>
      <a href="#providedBy" title="http://data.europa.eu/2sa/cav#providedBy">Provided by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ratedIn">
+  <h3>Rated in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#ratedIn</p>
+  <div class="comment">
+   <span class="markdown">Relates a score to the responsible agent that assigned it for a given criterion in the context of an assessment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c">http://data.europa.eu/w21/2c930c7b-5e2f-4954-8522-bd3411339d6c</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Statement" title="http://data.europa.eu/2sa/cav#Statement">Statement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Scenario" title="http://data.europa.eu/2sa/cav#Scenario">Scenario</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1426,7 +1480,7 @@ This section provides details for each class and property defined by Core Assess
   <h3>Triggered from<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#triggeredFrom</p>
   <div class="comment">
-   <span class="markdown">The event causing the current assessment as the result of another related assessment.</span>
+   <span class="markdown">Relates an assessment to the assessment that initiated it.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1463,7 +1517,7 @@ This section provides details for each class and property defined by Core Assess
   <h3>Triggers<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#triggers</p>
   <div class="comment">
-   <span class="markdown">The event causing further related assessment(s) due to the current one.</span>
+   <span class="markdown">Relates an assessment to the assessment(s) it initiates.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1514,7 +1568,7 @@ This section provides details for each class and property defined by Core Assess
   <li><a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">Version</a></li>
  </ul>
  <div class="entity" id="http://purl.org/dc/terms/description">
-  <h3>Description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Description<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
   <div class="comment">
    <span class="markdown">Brief description of the resource.</span>
@@ -1537,7 +1591,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="instructionDescription">
-  <h3>Instruction description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Instruction description<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#instructionDescription</p>
   <div class="comment">
    <span class="markdown">Guideline or description that needs to followed during the evaluation of one particular criterion.</span>
@@ -1568,7 +1622,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="interpretation">
-  <h3>Interpretation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Interpretation<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#interpretation</p>
   <div class="comment">
    <span class="markdown">The favourability perception of the statement (e.g. positive, negative or neutral).</span>
@@ -1599,7 +1653,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="http://purl.org/dc/terms/issued">
-  <h3>Issued<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Issued<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
   <div class="comment">
    <span class="markdown">Date of formal issuance of the Specification.</span>
@@ -1610,7 +1664,7 @@ This section provides details for each class and property defined by Core Assess
      has sub-properties
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/dcat#releaseDate" title="http://www.w3.org/ns/dcat#releaseDate">Release date</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#http://www.w3.org/ns/dcat#releaseDate" title="http://www.w3.org/ns/dcat#releaseDate">Release date</a> <sup class="type-dp" title="datatype property">dp</sup>
     </dd>
     <dt>
      has domain
@@ -1622,13 +1676,13 @@ This section provides details for each class and property defined by Core Assess
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Resource</a>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="judgement">
-  <h3>Judgement<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Judgement<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#judgement</p>
   <div class="comment">
    <span class="markdown">The text expressing the statement’s resulting value judgement.</span>
@@ -1659,7 +1713,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="purpose">
-  <h3>Purpose<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Purpose<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#purpose</p>
   <div class="comment">
    <span class="markdown">The reason for which the assessment is done.</span>
@@ -1690,7 +1744,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="http://www.w3.org/ns/dcat#releaseDate">
-  <h3>Release date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Release date<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#releaseDate</p>
   <div class="comment">
    <span class="markdown">Date of formal issuance (e.g., publication) of the Specification.</span>
@@ -1701,7 +1755,7 @@ This section provides details for each class and property defined by Core Assess
      has super-properties
     </dt>
     <dd>
-     <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">Issued</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">Issued</a> <sup class="type-dp" title="datatype property">dp</sup>
     </dd>
     <dt>
      has domain
@@ -1719,7 +1773,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="http://www.w3.org/ns/adms#status">
-  <h3>Status<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Status<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/adms#status</p>
   <div class="comment">
    <span class="markdown">The status of the Asset in the context of a particular workflow process.</span>
@@ -1750,7 +1804,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="http://purl.org/dc/terms/title">
-  <h3>Title<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Title<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
   <div class="comment">
    <span class="markdown">A name given to the resource.</span>
@@ -1773,7 +1827,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="type">
-  <h3>Type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Type<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#type</p>
   <div class="comment">
    <span class="markdown">The categorisation of the statement.</span>
@@ -1804,7 +1858,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="value">
-  <h3>Value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Value<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#value</p>
   <div class="comment">
    <span class="markdown">The literal representing the score assigned.</span>
@@ -1835,7 +1889,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="valueDescription">
-  <h3>Value description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Value description<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://data.europa.eu/2sa/cav#valueDescription</p>
   <div class="comment">
    <span class="markdown">Brief description of the Asset.</span>
@@ -1866,7 +1920,7 @@ This section provides details for each class and property defined by Core Assess
   </div>
  </div>
  <div class="entity" id="http://www.w3.org/ns/dcat#version">
-  <h3>Version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Version<sup class="type-dp" title="datatype property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Datatype Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#version</p>
   <div class="comment">
    <span class="markdown">The version indicator (name or identifier) of a resource.</span>
