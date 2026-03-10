@@ -51,7 +51,7 @@ CAV/
 ├── cav_html/                             # The CAV in HTML format.
 ├── doc/                                  # Specification documents and guides.
 │   ├── CAMSS_info v9.0.0.pdf           # Set of informative documents about CAMSS.
-│   ├── CAV_Specification v1.4.0.pdf    # The CAV v1.4****.0 specification in pdf format.
+│   ├── CAV_Specification v1.4.0.pdf    # The CAV v1.4.0 specification in pdf format.
 │   ├── CAV v1.4.0 Release Notes.pdf    # The CAV release notes.
 │   └── EUPL v1.2.pdf                   # EUPL v1.2 license.
 ├── ttl/                                  # The CAV in ttl format.
