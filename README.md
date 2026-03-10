@@ -72,7 +72,7 @@ The CAV, even though is evolved and maintained by the CAMSS Action, it is part o
 ## 📚 Additional and Learning Resources
 
 - **CAV on Interoperable Europe Portal**: [Core Assessment Vocabulary (CAV)](https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav)
-- **CAV in HTML format**: [CAV Vocabulary in HTML](https://isa-camss.github.io/CAV/index-en.html)
+- **CAV in HTML format**: [CAV Vocabulary in HTML](https://isa-camss.github.io/CAV/)
 - **CSSV on Interoperable Europe Portal**: [Core Standards and Specifications Vocabulary (CSSV)](https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-standards-and-specifications-vocabulary-cssv)
 - **CAMSS Welcome Page**: [CAMSS on Interoperable Europe](https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss)
 - **"Introduction to Core Vocabularies" course**: [Core Vocabularies course on Interoperable Europe Academy](https://academy.europa.eu/courses/introduction-to-core-vocabularies)
