@@ -48,15 +48,15 @@ This repository contains the formal specification and implementation files for C
 
 ```
 CAV/
-│── uml                                   # The CAV UML.
-│   ├── CAV_UML_1.4.0.drawio              # The CAV UML in drawio format.
-│   └── CAV_UML_v1.4.0.png              # The CAV UML in png format.
+│── uml                             # The CAV UML.
+│   ├── CAV_UML_1.4.0.drawio        # The CAV UML in drawio format.
+│   └── CAV_UML_v1.4.0.png          # The CAV UML in png format.
 ├── cav_tbox.ttl                    # The CAV in RDF format.
-├── cav_shapes.ttl                    # The CAV in SHACL format.
+├── cav_shapes.ttl                  # The CAV in SHACL format.
 ├── CAV_UML_v1.4.0.png              # The CAV UML in png format.
-├── README.md                             # The github readme of the CAV.
+├── README.md                       # The github readme of the CAV.
 ├── CAMSS_info v9.0.0.pdf           # Set of informative documents about CAMSS.
-├── CAV_Specification v1.4.0.pdf    # The CAV v1.4.0 specification in pdf format.
+└── CAV_Specification v1.4.0.pdf    # The CAV v1.4.0 specification in pdf format.
 ```
 
 ## 🌍 Relationship to Other Initiatives
