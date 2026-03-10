@@ -1,0 +1,431 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix cv: <https://data.europa.eu/m8g/> .
+@prefix cav: <http://data.europa.eu/2sa/cav#> .
+
+#################################################################
+# Ontology
+#################################################################
+
+cav:CAVShapes a owl:Ontology ;
+    rdfs:label "CAV SHACL shapes to validate Assessments, Scores, Statements, Scenarios and Assets."@en ;
+    rdfs:comment "CAV a-box SHACL shapes to validate core assessment concepts and their relationships."@en ;
+    dct:modified "2026-02-02"^^xsd:date ;
+    owl:versionInfo "v1.0.0"@en .
+
+#################################################################
+# cav:AssessmentShape
+#################################################################
+
+cav:AssessmentShape a sh:NodeShape ;
+    sh:targetClass cav:Assessment ;
+    rdfs:label "Assessment Shape"@en ;
+
+    #################################################################
+    ## Minimum required properties
+    #################################################################
+
+    sh:property [
+        sh:path dct:title ;
+        sh:minCount 1 ;
+        sh:message "A cav:Assessment must have at least one dct:title."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:basedOn ;
+        sh:minCount 1 ;
+        sh:class cav:Scenario ;
+        sh:message "A cav:Assessment must be based on at least one cav:Scenario."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:performedBy ;
+        sh:minCount 1 ;
+        sh:class foaf:Agent ;
+        sh:message "A cav:Assessment must specify at least one cav:performedBy."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:documentedIn ;
+        sh:class rdfs:Resource ;
+        sh:message "An Assessment may link to supporting documentation."@en ;
+        sh:severity sh:Info ;
+    ] ;
+
+    sh:property [
+        sh:path dcat:distribution ;
+        sh:message "A cav:Assessment must have at least one dcat:distribution."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:assesses ;
+        sh:minCount 1 ;
+        sh:message "An Assessment must assess at least one asset."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:considers ;
+        sh:minCount 1 ;
+        sh:message "An Assessment must consider at least one score."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:requestedBy ;
+        sh:minCount 1 ;
+        sh:class foaf:Agent ;
+        sh:message "An Assessment must specify the requesting agent."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:performedBy ;
+        sh:minCount 1 ;
+        sh:class foaf:Agent ;
+        sh:message "An Assessment must specify the performing agent(s)."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:hasReport ;
+        sh:minCount 1 ;
+        sh:class dcat:Distribution ;
+        sh:message "An Assessment must have at least one report."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:hasSummary ;
+        sh:class dcat:Distribution ;
+        sh:message "An Assessment may have a summary distribution."@en ;
+        sh:severity sh:Info ;
+    ] ;
+        
+    sh:property [
+        sh:path cav:triggers ;
+        sh:class dcat:Assessment ;
+        sh:message "An Assessment may triggers another assessment."@en ;
+        sh:severity sh:Info ;
+    ] ;
+
+    sh:property [
+        sh:path cav:triggersFrom ;
+        sh:class dcat:Assessment ;
+        sh:message "An Assessment may be triggered by another assessment."@en ;
+        sh:severity sh:Info ;
+    ] ;
+    
+    #################################################################
+    ## Inverse constraints: cav:triggers and cav:triggeredFrom
+    #################################################################
+
+    sh:property [
+        sh:path cav:triggers ;
+        sh:sparql [
+            sh:select """
+            SELECT $this ?assess WHERE {
+                $this cav:triggers ?assess .
+                FILTER NOT EXISTS { ?assess cav:triggeredFrom $this }
+            }
+            """ ;
+            sh:message "Inverse violation: cav:triggers must match cav:triggeredFrom."@en ;
+            sh:severity sh:Violation ;
+        ] ;
+    ] ;
+
+    sh:property [
+        sh:path cav:triggeredFrom ;
+        sh:sparql [
+            sh:select """
+            SELECT $this ?assess WHERE {
+                $this cav:triggeredFrom ?assess .
+                FILTER NOT EXISTS { ?assess cav:triggers $this }
+            }
+            """ ;
+            sh:message "Inverse violation: cav:triggeredFrom must match cav:triggers."@en ;
+            sh:severity sh:Violation ;
+        ] ;
+    ] ;
+
+    #################################################################
+    ## Distribution must have dcat:accessURL
+    #################################################################
+
+    sh:sparql [
+        sh:message "Each dcat:distribution must include a dcat:accessURL."@en ;
+        sh:select """
+            SELECT $this ?distribution WHERE {
+                $this dcat:distribution ?distribution .
+                FILTER NOT EXISTS { ?distribution dcat:accessURL ?url }
+            }
+        """ ;
+    ] .
+
+#################################################################
+# cav:ScenarioShape
+#################################################################
+
+cav:ScenarioShape a sh:NodeShape ;
+    sh:targetClass cav:Scenario ;
+    rdfs:label "Scenario Shape"@en ;
+    sh:severity sh:Info ;
+
+    sh:property [
+        sh:path cav:purpose ;
+        sh:minCount 1 ;
+        sh:datatype rdfs:Literal ;
+        sh:message "A cav:Scenario must have a cav:purpose."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:defines ;
+        sh:class cav:EvaluationContext ;
+        sh:message "cav:defines must point to a cav:EvaluationContext."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:definesSub ;
+        sh:class cav:Scenario ;
+        sh:message "cav:definesSub must point to a cav:Scenario."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:includes ;
+        sh:class cv:Criterion ;
+        sh:message "cav:includes must point to a cv:Criterion."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    #################################################################
+    ## Inverse constraints: cav:defines and cav:definedBy and cav:definesSub
+    #################################################################
+
+        sh:property [
+        sh:path cav:defines ;
+        sh:sparql [
+            sh:select """
+            SELECT $this ?ec WHERE {
+                $this cav:defines ?ec .
+                FILTER NOT EXISTS { ?ec cav:definedBy $this }
+            }
+            """ ;
+            sh:message "Inverse violation: cav:defines must match cav:definedBy."@en ;
+            sh:severity sh:Violation ;
+        ] ;
+    ] ;
+
+    sh:property [
+        sh:path cav:definesSub ;
+        sh:sparql [
+            sh:select """
+            SELECT $this ?sub WHERE {
+                $this cav:definesSub ?sub .
+                FILTER (?sub = $this)
+            }
+            """ ;
+            sh:message "A Scenario cannot defineSub itself."@en ;
+            sh:severity sh:Violation ;
+        ] ;
+    ] .
+
+#################################################################
+# cav:EvaluationContextShape
+#################################################################
+
+cav:EvaluationContextShape a sh:NodeShape ;
+    sh:targetClass cav:EvaluationContext ;
+    rdfs:label "Evaluation Context Shape"@en ;
+    sh:severity sh:Info ;
+
+    sh:property [
+        sh:path cav:definedBy ;
+        sh:class cav:Scenario ;
+        sh:message "A cav:EvaluationContext must be defined by a cav:Scenario."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:contextualises ;
+        sh:class cv:Criterion ;
+        sh:message "cav:contextualises must point to a cv:Criterion."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:instructionDescription ;
+        sh:datatype rdfs:Literal ;
+        sh:message "An EvaluationContext must have instructionDescription."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    #################################################################
+    ## Inverse constraint: Scenario defines EvaluationContext and definedBy / defines
+    #################################################################
+
+    sh:property [
+        sh:path cav:definedBy ;
+        sh:sparql [
+            sh:select """
+            SELECT $this ?scenario WHERE {
+                $this cav:definedBy ?scenario .
+                FILTER NOT EXISTS { ?scenario cav:defines $this }
+            }
+            """ ;
+            sh:message "Inverse violation: EvaluationContext cav:definedBy must match Scenario cav:defines."@en ;
+            sh:severity sh:Violation ;
+        ] ;
+    ] .
+
+#################################################################
+# cav:AssetShape
+#################################################################
+cav:AssetShape a sh:NodeShape ;
+    sh:targetClass cav:Asset ;
+    rdfs:label "Asset Shape"@en ;
+
+    sh:property [
+        sh:path cav:valueDescription ;
+        sh:datatype rdfs:Literal ;
+        sh:message "An Asset must have a value description."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:documentedIn ;
+        sh:class rdfs:Resource ;
+        sh:message "An Asset may link to supporting documentation."@en ;
+        sh:severity sh:Info ;
+    ] .
+
+#################################################################
+# cav:ScoreShape
+#################################################################
+
+cav:ScoreShape a sh:NodeShape ;
+    sh:targetClass cav:Score ;
+    rdfs:label "Score Shape"@en ;
+
+    #################################################################
+    ## Minimum required properties
+    #################################################################
+
+    sh:property [
+        sh:path cav:value ;
+        sh:minCount 1 ;
+        sh:message "A cav:Score must have a cav:value."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:assignedTo ;
+        sh:minCount 1 ;
+        sh:class cv:Criterion ;
+        sh:message "A cav:Score must be assigned to a cv:Criterion."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:providedBy ;
+        sh:class foaf:Agent ;
+        sh:message "A cav:Score must be provided by a foaf:Agent."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:ratedIn ;
+        sh:class cav:EvaluationContext ;
+        sh:message "cav:ratedIn must point to a cav:EvaluationContext."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    #################################################################
+    ## Inverse constraint: cav:provides / cav:providedBy
+    ################################################################# 
+
+    sh:property [
+        sh:path cav:providedBy ;
+        sh:sparql [
+            sh:select """
+            SELECT $this ?agent WHERE {
+                $this cav:providedBy ?agent .
+                FILTER NOT EXISTS { ?agent cav:provides $this }
+            }
+            """ ;
+            sh:message "Inverse violation: Agent must cav:provides the Score it provided."@en ;
+            sh:severity sh:Violation ;
+        ] ;
+    ] .
+
+#################################################################
+# foaf:AgentShape (only for provides/providedBy)
+#################################################################
+cav:AgentShape a sh:NodeShape ;
+    sh:targetClass foaf:Agent ;
+    rdfs:label "Agent Shape"@en ;
+
+    sh:property [
+        sh:path cav:provides ;
+        sh:class cav:Score ;
+        sh:message "A foaf:Agent may provide one or more Scores."@en ;
+        sh:severity sh:Info ;
+    ] .
+
+#################################################################
+# cav:StatementShape
+#################################################################
+
+cav:StatementShape a sh:NodeShape ;
+    sh:targetClass cav:Statement ;
+    rdfs:label "Statement Shape"@en ;
+    sh:severity sh:Info ;
+
+    sh:property [
+        sh:path cav:judgement ;
+        sh:minCount 1 ;
+        sh:datatype rdfs:Resource ;
+        sh:message "A cav:Statement must include a cav:judgement."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:formulatedBy ;
+        sh:class foaf:Agent ;
+        sh:message "cav:formulatedBy must point to a foaf:Agent."@en ;
+        sh:severity sh:Violation ;
+    ] ;
+
+    sh:property [
+        sh:path cav:interpretation ;
+        sh:class skos:Concept ;
+        sh:message "A Statement may have an interpretation (positive/negative/neutral)."@en ;
+        sh:severity sh:Info ;
+    ] ;
+    
+    sh:property [
+        sh:path cav:type ;
+        sh:class skos:Concept ;
+        sh:message "A Statement may have a type classification."@en ;
+        sh:severity sh:Info ;
+    ] ;
+
+    sh:property [
+        sh:path cav:refersTo ;
+        sh:class [ sh:or ( cav:Scenario cav:Score cav:Criterion ) ] ;
+        sh:minCount 1 ;
+        sh:message "A Statement must refer to at least one Scenario, Score, or Criterion."@en ;
+        sh:severity sh:Violation ;
+    ] .
