@@ -1,7 +1,7 @@
 # Core Assessment Vocabulary (CAV)
 
 [![License](https://img.shields.io/badge/License-EUPL%201.2-blue.svg)](https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12)
-[![Latest Release](https://img.shields.io/badge/version-1.3.0-green.svg)](https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav)
+[![Latest Release](https://img.shields.io/badge/version-1.4.0-green.svg)](https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav)
 
 ## 📋 Overview
 
@@ -51,15 +51,15 @@ CAV/
 ├── cav_html/                             # The CAV in HTML format.
 ├── doc/                                  # Specification documents and guides.
 │   ├── CAMSS_info v9.0.0.pdf           # Set of informative documents about CAMSS.
-│   ├── CAV_Specification v1.3.0.pdf    # The CAV v1.3.0 specification in pdf format.
-│   ├── CAV v1.3.0 Release Notes.pdf    # The CAV release notes.
+│   ├── CAV_Specification v1.4.0.pdf    # The CAV v1.4****.0 specification in pdf format.
+│   ├── CAV v1.4.0 Release Notes.pdf    # The CAV release notes.
 │   └── EUPL v1.2.pdf                   # EUPL v1.2 license.
 ├── ttl/                                  # The CAV in ttl format.
 │   └── cav_tbox.ttl                    # The CAV in RDF format.
 │── uml                                   # The CAV UML.
 │   ├── CAV_UML_v1.2.0.xml              # The CAV UML in xml format.
-│   ├── CAV_UML_1.3.0.drawio              # The CAV UML in drawio format.
-│   └── CAV_UML_v1.3.0.png              # The CAV UML in png format.
+│   ├── CAV_UML_1.4.0.drawio              # The CAV UML in drawio format.
+│   └── CAV_UML_v1.4.0.png              # The CAV UML in png format.
 ├── README.md                             # The github readme of the CAV.
 └── cav.ttl                               # The CAV in RDF format.
 ```
@@ -102,7 +102,8 @@ For questions, feedback, or collaboration opportunities:
 
 ## 🔄 Version History
 
-- **v1.3.0** (Latest): Enhanced metadata and improved alignment with DCAT
+- **v1.4.0** (Latest): Current stable release
+- **v1.3.0**: Enhanced metadata and improved alignment with DCAT
 - **v1.2.0**: Extended assessment statement capabilities
 - **v1.1.0**: Added support for evidence chains and criterion grouping
 - **v1.0.0**: First stable release
